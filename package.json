@@ -21,9 +21,13 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.3.2",
+    "@material-ui/icons": "^4.2.1",
     "express": "^4.16.3",
     "if-env": "^1.0.4",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "react-jss": "^8.6.1",
-    "react-static-plugin-jss": "^7.0.10"
+    "react-static-plugin-jss": "^7.0.10",
+    "react-swipeable-views": "^0.13.3"
   }
 }
