@@ -41,7 +41,7 @@ const tutorialSteps = [
 
 const useStyles = makeStyles(theme => ({
   root: {
-    maxWidth: 400,
+    maxWidth: false,
     flexGrow: 1,
   },
   header: {
@@ -52,9 +52,8 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.background.default,
   },
   img: {
-    height: 255,
     display: 'block',
-    maxWidth: 400,
+    maxWidth: false,
     overflow: 'hidden',
     width: '100%',
   },
