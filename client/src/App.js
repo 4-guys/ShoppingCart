@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Carousel from './component/Carousel'
 import NavBar from './component/NavBar'
@@ -12,8 +11,7 @@ class App extends Component {
       <React.Fragment>
 
       <NavBar />
-      <Container maxWidth="md">
-
+      <Container maxWidth="lg">
         <Carousel />
       </Container>
       <Grid
