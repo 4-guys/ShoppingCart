@@ -61,11 +61,9 @@ export default function SignUp() {
         <Container component="main" maxWidth="xs">
             <CssBaseline />
             <div className={classes.paper}>
-                <Avatar className={classes.avatar}>
-                    <LockOutlinedIcon />
-                </Avatar>
+                
                 <Typography component="h1" variant="h5">
-                    Sign up
+                    Sign Up
         </Typography>
                 <form className={classes.form} noValidate>
                     <Grid container spacing={2}>
@@ -95,6 +93,26 @@ export default function SignUp() {
                         <Grid item xs={12}>
                             <TextField
                                 variant="outlined"
+                                fullWidth
+                                id="address"
+                                label="Address (optional)"
+                                name="address"
+                                autoComplete="address"
+                            />
+                        </Grid>
+                        <Grid item xs={12}>
+                            <TextField
+                                variant="outlined"
+                                fullWidth
+                                id="phoneNum"
+                                label="Phone Number (optional)"
+                                name="address"
+                                autoComplete="address"
+                            />
+                        </Grid>
+                        <Grid item xs={12}>
+                            <TextField
+                                variant="outlined"
                                 required
                                 fullWidth
                                 id="email"
@@ -115,12 +133,6 @@ export default function SignUp() {
                                 autoComplete="current-password"
                             />
                         </Grid>
-                        <Grid item xs={12}>
-                            <FormControlLabel
-                                control={<Checkbox value="allowExtraEmails" color="primary" />}
-                                label="I want to receive inspiration, marketing promotions and updates via email."
-                            />
-                        </Grid>
                     </Grid>
                     <Button
                         type="submit"
@@ -133,7 +145,7 @@ export default function SignUp() {
           </Button>
                     <Grid container justify="flex-end">
                         <Grid item>
-                            <Link href="#" variant="body2">
+                            <Link href="/login" variant="body2">
                                 Already have an account? Sign in
               </Link>
                         </Grid>

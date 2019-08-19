@@ -8,7 +8,7 @@ function Home() {
     return (
         <React.Fragment>
 
-            <Container maxWidth="md">
+            <Container maxWidth="lg">
 
                 <Carousel />
             </Container>
