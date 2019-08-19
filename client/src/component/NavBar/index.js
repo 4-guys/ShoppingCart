@@ -6,6 +6,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
+import SimpleMenu from '../Menu'
 
 
 const useStyles = makeStyles(theme => ({
@@ -68,20 +69,18 @@ export default function Pricing() {
       <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
           <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-            Company name
+          <Link variant="h6" color="textPrimary" href="/home" underline='none' className={classes.link}>
+          Company name
+            </Link>
           </Typography>
           <nav>
-            <Link variant="button" color="textPrimary" href="#" className={classes.link}>
-              Computers
-            </Link>
-            <Link variant="button" color="textPrimary" href="#" className={classes.link}>
-              Accersories
-            </Link>
-            <Link variant="button" color="textPrimary" href="#" className={classes.link}>
+           <SimpleMenu/>
+
+            {/* <Link variant="button" color="textPrimary" href="/contact" className={classes.link}>
               Contact
-            </Link>
+            </Link> */}
           </nav>
-          <Button href="#" color="primary" variant="outlined" className={classes.link}>
+          <Button href="/login" color="primary" variant="outlined" className={classes.link}>
             Login
           </Button>
         </Toolbar>
