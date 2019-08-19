@@ -54,18 +54,15 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function SignIn() {
+export default function Login() {
     const classes = useStyles();
 
     return (
         <Container component="main" maxWidth="xs">
             <CssBaseline />
             <div className={classes.paper}>
-                <Avatar className={classes.avatar}>
-                    <LockOutlinedIcon />
-                </Avatar>
                 <Typography component="h1" variant="h5">
-                    Sign in
+                    Login
         </Typography>
                 <form className={classes.form} noValidate>
                     <TextField
@@ -101,7 +98,7 @@ export default function SignIn() {
                         color="primary"
                         className={classes.submit}
                     >
-                        Sign In
+                        Login
           </Button>
                     <Grid container>
                         <Grid item xs>
@@ -110,7 +107,7 @@ export default function SignIn() {
               </Link>
                         </Grid>
                         <Grid item>
-                            <Link href="#" variant="body2">
+                            <Link href="/signup" variant="body2">
                                 {"Don't have an account? Sign Up"}
                             </Link>
                         </Grid>
