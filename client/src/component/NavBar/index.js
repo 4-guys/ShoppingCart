@@ -70,7 +70,7 @@ export default function Pricing() {
         <Toolbar className={classes.toolbar}>
           <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
           <Link variant="h6" color="textPrimary" href="/home" underline='none' className={classes.link}>
-          Company name
+          CHRIS'S Soju Emporium!!!!!
             </Link>
           </Typography>
           <nav>
