@@ -56,6 +56,8 @@ const useStyles = makeStyles(theme => ({
     maxWidth: false,
     overflow: 'hidden',
     width: '100%',
+    height: '350px'
+
   },
 }));
 
