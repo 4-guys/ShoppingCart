@@ -98,9 +98,11 @@ export default function Album() {
                                         title="Image title"
                                     />
                                     <CardContent className={classes.cardContent}>
+                                        <Button href="/productDetails">
                                         <Typography gutterBottom variant="h5" component="h2">
                                             Item name (will input with props)
                     </Typography>
+                    </Button>
                                         <Typography>
                                             This is a media card. You can use this section to describe the content.
                     </Typography>
