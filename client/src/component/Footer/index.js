@@ -10,7 +10,7 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+      Sogu
       </Link>{' '}
       {new Date().getFullYear()}
       {'. Built with '}
@@ -45,20 +45,10 @@ export default function StickyFooter() {
     <div className={classes.root}>
       <CssBaseline />
       <Container component="main" className={classes.main} maxWidth="sm">
-
-        {/* <Typography variant="h5" component="h2" gutterBottom> */}
-          {/* {'Chug Chug Chug.'} */}
-          {/* {'Chris Chugs Soju...Sogu.'} */}
-        {/* </Typography> */}
         <Typography variant="body1">Chris chugs Soju...SOGU.</Typography>
         <Copyright />
       </Container>
-      {/* <footer className={classes.footer}>
-        <Container maxWidth="sm">
-          <Typography variant="body1">My sticky footer can be found here.</Typography>
-          <Copyright />
-        </Container>
-      </footer> */}
+
     </div>
   );
 }
