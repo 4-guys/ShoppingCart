@@ -19,7 +19,7 @@ function Copyright() {
         <Typography variant="body2" color="textSecondary" align="center">
             {'Copyright © '}
             <Link color="inherit" href="https://material-ui.com/">
-                Your Website
+                Sogu
       </Link>{' '}
             {new Date().getFullYear()}
             {'. Built with '}
@@ -88,7 +88,7 @@ export default function Checkout() {
 
     const handleNext = () => {
         setActiveStep(activeStep + 1);
-    };
+    };  
 
     const handleBack = () => {
         setActiveStep(activeStep - 1);
