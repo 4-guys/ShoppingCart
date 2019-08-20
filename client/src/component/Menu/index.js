@@ -36,7 +36,7 @@ export default function SimpleMenu() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose} ><Link variant="button" color="textPrimary" href="/contact"  className={classes.link}>
+        <MenuItem onClick={handleClose} ><Link variant="button" color="textPrimary" href="/product"  className={classes.link}>
               Laptop
             </Link></MenuItem>        <MenuItem onClick={handleClose} ><Link variant="button" color="textPrimary" href="/product"  className={classes.link}>
               Mice
@@ -48,9 +48,7 @@ export default function SimpleMenu() {
               Audio
             </Link></MenuItem>        <MenuItem onClick={handleClose} ><Link variant="button" color="textPrimary" href="/product"  className={classes.link}>
               Accesories
-            </Link></MenuItem>        <MenuItem onClick={handleClose} ><Link variant="button" color="textPrimary" href="/product"  className={classes.link}>
-              Contact
-            </Link></MenuItem>
+            </Link></MenuItem>       
       </Menu>
     </div>
   );

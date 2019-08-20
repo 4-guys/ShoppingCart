@@ -80,6 +80,9 @@ export default function Pricing() {
               Contact
             </Link> */}
           </nav>
+          <Button href="/login"  className={classes.link}>
+            Contact
+          </Button>
           <Button href="/login" color="primary" variant="outlined" className={classes.link}>
             Login
           </Button>
