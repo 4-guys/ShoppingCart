@@ -56,6 +56,8 @@ const useStyles = makeStyles(theme => ({
     maxWidth: false,
     overflow: 'hidden',
     width: '100%',
+    height: '350px'
+
   },
 }));
 
@@ -99,7 +101,7 @@ function SwipeableTextMobileStepper() {
       <MobileStepper
         steps={maxSteps}
         position="static"
-        variant="text"
+        variant="dots"
         activeStep={activeStep}
         nextButton={
           <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
