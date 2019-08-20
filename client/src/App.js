@@ -9,6 +9,7 @@ import ProductDetails from "./pages/ProductDetails"
 import Product from "./pages/Product";
 import Checkout from "./pages/Checkout";
 import Footer from './component/Footer'
+import Contact from "./pages/Contact";
 
 class App extends Component {
   render() {
@@ -23,7 +24,9 @@ class App extends Component {
           <Route exact path="/productDetails" component={ProductDetails}/>          
           <Route exact path="/product" component={Product}/>
           <Route exact path="/checkout" component={Checkout}/>
+          <Route exact path="/contact" component={Contact}/>
           <Footer/>
+          
         </div>
       </Router>
 
