@@ -8,44 +8,51 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-const useStyles = makeStyles({
-  card: {
-    maxWidth: 345,
-  },
-  media: {
-    height: 140,
-  },
-});
+const useStyles = makeStyles(theme => ({
+    cardGrid: {
+        paddingTop: theme.spacing(8),
+        paddingBottom: theme.spacing(8),
+    },
+    card: {
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+    },
+    cardMedia: {
+        paddingTop: '56.25%', // 16:9
+    },
+    cardContent: {
+        flexGrow: 1,
+    },
+}))
 
 export default function MediaCard() {
-  const classes = useStyles();
+    const classes = useStyles();
 
-  return (
-    <Card className={classes.card}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image="https://animals.sandiegozoo.org/sites/default/files/2016-11/animals_hero_lizards.jpg"
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Lizard
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
-      </CardActions>
-    </Card>
-  );
+    return (
+        <Card className={classes.card}>
+            <CardMedia
+                className={classes.cardMedia}
+                image="https://source.unsplash.com/random"
+                title="Image title"
+            />
+            <CardContent className={classes.cardContent}>
+                <Button href="/productDetails">
+                    <Typography gutterBottom variant="h5" component="h2">
+                        Item name (will input with props)
+                    </Typography>
+                </Button>        <Typography>
+                    This is a media card. You can use this section to describe the content.
+</Typography>
+            </CardContent>
+            <CardActions>
+                <Button size="small" color="primary">
+                    Add to Cart
+</Button>
+                <Button href="/checkout" size="small" color="primary">
+                    Checkout
+</Button>
+            </CardActions>
+        </Card>
+    );
 }
