@@ -55,22 +55,10 @@ const useStyles = makeStyles(theme => ({
     display: 'block',
     maxWidth: false,
     overflow: 'hidden',
-    // width: '100%',
     height: '350px',
     marginLeft: "auto",
     marginRight: "auto",
-  
-    // paddingTop: '56.25%', // 16:9
-
   },
-  center: {
-    display: "block",
-  marginLeft: "auto",
-  marginRight: "auto",
-  width: "80%",
-  // paddingTop: '56.25%', // 16:9
-
-  }
 }));
 
 function SwipeableTextMobileStepper() {
@@ -101,7 +89,6 @@ function SwipeableTextMobileStepper() {
         index={activeStep}
         onChangeIndex={handleStepChange}
         enableMouseEvents
-        // className={classes.center}
       >
         {tutorialSteps.map((step, index) => (
           <div key={step.label}>
