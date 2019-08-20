@@ -14,21 +14,7 @@ import AddressForm from './AddressForm';
 import PaymentForm from './PaymentForm';
 import Review from './Review';
 
-function Copyright() {
-    return (
-        <Typography variant="body2" color="textSecondary" align="center">
-            {'Copyright © '}
-            <Link color="inherit" href="https://material-ui.com/">
-                Sogu
-      </Link>{' '}
-            {new Date().getFullYear()}
-            {'. Built with '}
-            <Link color="inherit" href="https://material-ui.com/">
-                Material-UI.
-      </Link>
-        </Typography>
-    );
-}
+
 
 const useStyles = makeStyles(theme => ({
     appBar: {
@@ -147,7 +133,6 @@ export default function Checkout() {
                             )}
                     </React.Fragment>
                 </Paper>
-                <Copyright />
             </main>
         </React.Fragment>
     );

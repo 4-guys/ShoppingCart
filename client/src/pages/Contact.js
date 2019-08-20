@@ -14,21 +14,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 
-function Copyright() {
-    return (
-        <Typography variant="body2" color="textSecondary" align="center">
-            {'Copyright © '}
-            <Link color="inherit" href="https://material-ui.com/">
-                Your Website
-      </Link>{' '}
-            {new Date().getFullYear()}
-            {'. Built with '}
-            <Link color="inherit" href="https://material-ui.com/">
-                Material-UI.
-      </Link>
-        </Typography>
-    );
-}
 const useStyles = makeStyles(theme => ({
     icon: {
         marginRight: theme.spacing(2),
@@ -92,7 +77,7 @@ export default function Album() {
                                 <Card className="Michael">
                                     <CardMedia
                                         className={classes.cardMedia}
-                                        image="./client/public/images/Michael.jpg"
+                                        image="../assets/images/Michael.jpg"
                                         title="Michael"
                                     />
                                     <CardContent className={classes.cardContent}>
@@ -116,16 +101,6 @@ export default function Album() {
                     </Grid>
                 </Container>
             </main>
-            {/* Footer */}
-            <footer className={classes.footer}>
-                <Typography variant="h6" align="center" gutterBottom>
-                    Footer
-        </Typography>
-                <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-                    Something here to give the footer a purpose!
-        </Typography>
-                <Copyright />
-            </footer>
             {/* End footer */}
         </React.Fragment>
     );
