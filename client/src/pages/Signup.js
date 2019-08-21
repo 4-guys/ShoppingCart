@@ -52,6 +52,8 @@ export default function SignUp() {
       API.signUpUser({
         firstName,
         lastName,
+        address,
+        phoneNum,
         email,
         password
       })

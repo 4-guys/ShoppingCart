@@ -10,7 +10,7 @@ export default {
         return axios.get("/api/items/" + itemName).then(results => results.data);
     },
 
-    signUpUser: function () {
-        return axios.post("/api/users/").then(results => results.data);
+    signUpUser: function (newUser) {
+        return axios.post("/api/signup/").then(results => results.data);
     }
 };
