@@ -4,8 +4,13 @@ const db = require("../models");
 module.exports = {
   findAll: function(req, res) {
     db.Item
+<<<<<<< HEAD
       .findAll()
       // .sort({ date: -1 })
+=======
+      // .find(req.query)
+      .sort({ date: -1 })
+>>>>>>> origin/tai2
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

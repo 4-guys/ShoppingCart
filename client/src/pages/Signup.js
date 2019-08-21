@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState} from 'react';
+import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
@@ -8,8 +9,7 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-
-
+import API from '../utils/API';
 
 const useStyles = makeStyles(theme => ({
     '@global': {
@@ -39,6 +39,29 @@ const useStyles = makeStyles(theme => ({
 export default function SignUp() {
     const classes = useStyles();
 
+    const [firstName, setFirstName] = useState();
+    const [lastName, setLastName] = useState();
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
+    const [address, setAddress] = useState();
+    const [phone, setPhone] = useState();
+
+    const handleSubmit = e => {
+    e.preventDefault();
+    if (firstName && lastName) {
+      API.signUpUser({
+        firstName,
+        lastName,
+        address,
+        phone,
+        email,
+        password
+      })
+        .then(res => window.location.replace("/login"))
+        .catch(err => console.log(err));
+    }
+  };
+
     return (
         <Container component="main" maxWidth="xs">
             <CssBaseline />
@@ -47,72 +70,84 @@ export default function SignUp() {
                 <Typography component="h1" variant="h5">
                     Sign Up
         </Typography>
-                <form className={classes.form} noValidate>
+                <form onSubmit={handleSubmit} className={classes.form} noValidate>
                     <Grid container spacing={2}>
                         <Grid item xs={12} sm={6}>
                             <TextField
+                                value={firstName}
                                 autoComplete="fname"
                                 name="firstName"
                                 variant="outlined"
                                 required
                                 fullWidth
-                                id="firstName"
+                                id="firstName-input"
                                 label="First Name"
                                 autoFocus
+                                onChange={e => setFirstName(e.target.value)}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <TextField
+                                value={lastName}
                                 variant="outlined"
                                 required
                                 fullWidth
-                                id="lastName"
+                                id="lastName-input"
                                 label="Last Name"
                                 name="lastName"
                                 autoComplete="lname"
+                                onChange={e => setLastName(e.target.value)}
                             />
                         </Grid>
                         <Grid item xs={12}>
                             <TextField
+                                value={address}
                                 variant="outlined"
                                 fullWidth
-                                id="address"
+                                id="address-input"
                                 label="Address (optional)"
                                 name="address"
                                 autoComplete="address"
+                                onChange={e => setAddress(e.target.value)}
                             />
                         </Grid>
                         <Grid item xs={12}>
                             <TextField
+                                value={phone}
                                 variant="outlined"
                                 fullWidth
-                                id="phoneNum"
+                                id="phone"
                                 label="Phone Number (optional)"
-                                name="address"
-                                autoComplete="address"
+                                name="phone"
+                                autoComplete="phone"
+                                onChange={e => setPhone(e.target.value)}
                             />
                         </Grid>
                         <Grid item xs={12}>
                             <TextField
+                                value={email}
                                 variant="outlined"
                                 required
                                 fullWidth
-                                id="email"
+                                id="email-input"
                                 label="Email Address"
                                 name="email"
                                 autoComplete="email"
+                                onChange={e => setEmail(e.target.value)}
                             />
                         </Grid>
                         <Grid item xs={12}>
                             <TextField
+                                value={password}
                                 variant="outlined"
                                 required
                                 fullWidth
                                 name="password"
                                 label="Password"
                                 type="password"
-                                id="password"
+                                id="password-input"
                                 autoComplete="current-password"
+                                onChange={e => setPassword(e.target.value)}
                             />
                         </Grid>
                     </Grid>
