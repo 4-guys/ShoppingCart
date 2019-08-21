@@ -36,17 +36,28 @@ export default function SimpleMenu() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose} ><Link variant="button" color="textPrimary" href="/product"  className={classes.link}>
+        <MenuItem onClick={handleClose} >
+          <Link variant="button" color="textPrimary" href="/product"  className={classes.link}>
               Laptop
-            </Link></MenuItem>        <MenuItem onClick={handleClose} ><Link variant="button" color="textPrimary" href="/product"  className={classes.link}>
+            </Link></MenuItem>        
+            <MenuItem onClick={handleClose} >
+              <Link variant="button" color="textPrimary" href="/Mice"  className={classes.link}>
               Mice
-            </Link></MenuItem>        <MenuItem onClick={handleClose} ><Link variant="button" color="textPrimary" href="/product"  className={classes.link}>
+            </Link></MenuItem>        
+            <MenuItem onClick={handleClose} >
+              <Link variant="button" color="textPrimary" href="/Mats"  className={classes.link}>
               Mats
-            </Link></MenuItem>        <MenuItem onClick={handleClose} ><Link variant="button" color="textPrimary" href="/product"  className={classes.link}>
+            </Link></MenuItem>        
+            <MenuItem onClick={handleClose} >
+              <Link variant="button" color="textPrimary" href="/Keyboards"  className={classes.link}>
               Keyboards
-            </Link></MenuItem>        <MenuItem onClick={handleClose} ><Link variant="button" color="textPrimary" href="/product"  className={classes.link}>
+            </Link></MenuItem>        
+            <MenuItem onClick={handleClose} >
+              <Link variant="button" color="textPrimary" href="/Audio"  className={classes.link}>
               Audio
-            </Link></MenuItem>        <MenuItem onClick={handleClose} ><Link variant="button" color="textPrimary" href="/product"  className={classes.link}>
+            </Link></MenuItem>        
+            <MenuItem onClick={handleClose} >
+              <Link variant="button" color="textPrimary" href="/Accesories"  className={classes.link}>
               Accesories
             </Link></MenuItem>       
       </Menu>
