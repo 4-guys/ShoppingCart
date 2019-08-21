@@ -26,23 +26,27 @@ const useStyles = makeStyles(theme => ({
     },
 }))
 
-export default function MediaCard() {
+export function ProductList({children}){
+    return <ul>{children}</ul> 
+}
+
+export function ProductCard(props) {
     const classes = useStyles();
 
     return (
         <Card className={classes.card}>
             <CardMedia
                 className={classes.cardMedia}
-                image="https://source.unsplash.com/random"
+                image={props.image}
                 title="Image title"
             />
             <CardContent className={classes.cardContent}>
                 <Button href="/productDetails">
                     <Typography gutterBottom variant="h5" component="h2">
-                        Item name (will input with props)
+                        {props.title}
                     </Typography>
                 </Button>        <Typography>
-                    This is a media card. You can use this section to describe the content.
+                    {props.itemDescription}
 </Typography>
             </CardContent>
             <CardActions>
