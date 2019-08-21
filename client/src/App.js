@@ -35,12 +35,7 @@ class App extends Component {
           <Route exact path="/Keyboards" component={Keyboards}/>
           <Route exact path="/Audio" component={Audio}/>
           <Route exact path="/Accesories" component={Accesories}/>
-
-
-
-
           <Footer/>
-          
         </div>
       </Router>
 
