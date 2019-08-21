@@ -1,9 +1,9 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
-var passport = require("../config/passport");
+var passport = require("../config/passport")
 
 // Requiring our custom middleware for checking if a user is logged in
-var isAuthenticatedAdmin = require("../config/middleware/isAuthenticatedAdmin");
+var isAuthenticatedAdmin = require("../config/middleware/isAuthenticatedAdmin")
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
