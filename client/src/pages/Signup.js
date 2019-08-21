@@ -57,7 +57,7 @@ export default function SignUp() {
         email,
         password
       })
-        .then(res => window.location.replace("/"))
+        .then(res => window.location.replace("/login"))
         .catch(err => console.log(err));
     }
   };
