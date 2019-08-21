@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from "react";
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import ProductCard from '../component/ProductCard'
-
+import API from '../utils/API'
 
 const useStyles = makeStyles(theme => ({
     icon: {
@@ -38,10 +38,20 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const classes = useStyles();
 
-export default function Album() {
-    const classes = useStyles();
-
+class Products extends Component {
+    state = {
+        items: []
+      };
+      componentDidMount = () => {
+        this.getItems();
+      };
+    getItems = () => {
+        API.getItems().then(items => this.setState({items},
+            console.log(this.items)))
+      }    
+      render(){
     return (
         <React.Fragment>
             <CssBaseline />
@@ -50,7 +60,9 @@ export default function Album() {
             </AppBar>
             <main>
                 {/* Hero unit */}
-                <div className={classes.heroContent}>
+                <div 
+                // className={classes.heroContent}
+                >
                     <Container maxWidth="sm">
                         <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
                             Laptops
@@ -63,7 +75,9 @@ export default function Album() {
                         
                     </Container>
                 </div>
-                <Container className={classes.cardGrid} maxWidth="md">
+                <Container 
+                // className={classes.cardGrid} 
+                maxWidth="md">
                     {/* End hero unit */}
                     <Grid container spacing={4}>
                         {cards.map(card => (
@@ -76,5 +90,6 @@ export default function Album() {
             </main>
 
         </React.Fragment>
-    );
+    );}
 }
+export default Products;

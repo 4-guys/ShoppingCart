@@ -1,7 +1,7 @@
-// {
-//   "development": {
-//     "username": "root",
-//     "password": "root",
+{
+  "development": {
+    "username": "root",
+    "password": "root",
     "database": "shopping_cart_app",
     "host": "127.0.0.1",
     "port": 3306,
