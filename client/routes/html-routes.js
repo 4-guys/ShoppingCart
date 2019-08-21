@@ -17,7 +17,7 @@ module.exports = function(app) {
     if (req.user) {
       return res.redirect("/home");
     }
-    res.sendFile(path.join(__dirname, "../src/pages/Signup.js"));
+    res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
   app.get("/", function(req, res) {
@@ -28,20 +28,20 @@ module.exports = function(app) {
     if (req.user) {
       return res.redirect("/home");
     }
-    res.sendFile(path.join(__dirname, "../src/pages/Login.js"));
+    res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/admin", isAuthenticatedAdmin, function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/admin.html"));
+    res.sendFile(path.join(__dirname, "../public/index.html"));
       // +++++++++++++++++++++++++++++++++++==========
   });
 
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/home", isAuthenticated, function(req, res) {
-    res.sendFile(path.join(__dirname, "../src/pages/Home.js"));
+    res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
 };

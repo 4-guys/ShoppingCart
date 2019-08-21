@@ -9,7 +9,7 @@ var session = require("express-session");
 // Requiring passport as we've configured it
 var passport = require("./client/config/passport");
 // Setting up port and requiring models for syncing
-var PORT2 = process.env.PORT || 8080;
+// var PORT2 = process.env.PORT || 8080;
 var db = require("./client/models");
 // Creating express app and configuring middleware needed for authentication
 // var app = express();
@@ -25,12 +25,12 @@ app.use(passport.session());
 require("./client/routes/html-routes.js")(app);
 require("./client/routes/api-routes.js")(app);
 
-// Syncing our database and logging a message to the user upon success
-db.sequelize.sync().then(function() {
-  app.listen(PORT2, function() {
-    console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT2, PORT2);
-  });
-});
+// Syncing our database and logging a message to the user upon success - Maybe keep and remove other
+// db.sequelize.sync().then(function() {
+//   app.listen(PORT2, function() {
+//     console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT2, PORT2);
+//   });
+// });
 // ===================================================
 
 // Serve up static assets (usually on heroku)
@@ -44,6 +44,12 @@ app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/public/index.html"));
 });
 
-app.listen(PORT, function() {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
+// app.listen(PORT, function() {
+//   console.log(`🌎 ==> API server now on port ${PORT}!`);
+// });
+
+db.sequelize.sync().then(function() {
+  app.listen(PORT, function() {
+    console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
+  });
 });
