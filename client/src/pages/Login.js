@@ -54,7 +54,7 @@ export default function Login() {
                         margin="normal"
                         required
                         fullWidth
-                        id="email"
+                        id="email-input"
                         label="Email Address"
                         name="email"
                         autoComplete="email"
@@ -68,7 +68,7 @@ export default function Login() {
                         name="password"
                         label="Password"
                         type="password"
-                        id="password"
+                        id="password-input"
                         autoComplete="current-password"
                     />
                     <FormControlLabel

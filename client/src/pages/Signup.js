@@ -60,7 +60,7 @@ export default function SignUp() {
                                 variant="outlined"
                                 required
                                 fullWidth
-                                id="firstName"
+                                id="firstName-input"
                                 label="First Name"
                                 autoFocus
                             />
@@ -70,7 +70,7 @@ export default function SignUp() {
                                 variant="outlined"
                                 required
                                 fullWidth
-                                id="lastName"
+                                id="lastName-input"
                                 label="Last Name"
                                 name="lastName"
                                 autoComplete="lname"
@@ -80,7 +80,7 @@ export default function SignUp() {
                             <TextField
                                 variant="outlined"
                                 fullWidth
-                                id="address"
+                                id="address-input"
                                 label="Address (optional)"
                                 name="address"
                                 autoComplete="address"
@@ -101,7 +101,7 @@ export default function SignUp() {
                                 variant="outlined"
                                 required
                                 fullWidth
-                                id="email"
+                                id="email-input"
                                 label="Email Address"
                                 name="email"
                                 autoComplete="email"
@@ -115,7 +115,7 @@ export default function SignUp() {
                                 name="password"
                                 label="Password"
                                 type="password"
-                                id="password"
+                                id="password-input"
                                 autoComplete="current-password"
                             />
                         </Grid>
