@@ -1,20 +1,17 @@
 const router = require("express").Router();
-const itemControllers = require("../../client/controllers/itemControllers");
+const itemControllers = require("../../controllers/itemControllers");
 
 // Matches with "/api/books"
 router.route("/")
-    .get(itemControllers.findAll)
-    .post(itemControllers.create);
+    .get(itemControllers.findAll);
 
 
 router
     .route("/:itemName")
-    .get(itemControllers.findByItemName)
-    .put(itemControllers.update);
+    .get(itemControllers.findByItemName);
 
 router
     .route("/:brandName")
-    .get(itemControllers.findByBrandName)
-    .put(itemControllers.update);
+    .get(itemControllers.findByBrandName);
 
 module.exports = router;
