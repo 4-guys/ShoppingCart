@@ -22,13 +22,17 @@ module.exports = function(app) {
   app.post("/api/signup", function(req, res) {
     console.log(req.body);
     db.User.create({
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      address: req.body.address,
+      phone: req.body.phone,
       email: req.body.email,
       password: req.body.password
     }).then(function() {
       res.redirect(307, "/api/login");
     }).catch(function(err) {
-      console.log(err.errors[0].message);
-      res.status(422).json(err.errors[0].message);
+      console.log(err);
+      res.status(422).json(err);
     });
   });
 

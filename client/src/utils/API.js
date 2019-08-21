@@ -11,6 +11,6 @@ export default {
     },
 
     signUpUser: function (newUser) {
-        return axios.post("/api/signup/").then(results => results.data);
+        return axios.post("/api/signup/", newUser).then(results => results.data);
     }
 };

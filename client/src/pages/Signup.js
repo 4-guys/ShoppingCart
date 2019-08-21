@@ -44,7 +44,7 @@ export default function SignUp() {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
     const [address, setAddress] = useState();
-    const [phoneNum, setPhoneNum] = useState();
+    const [phone, setPhone] = useState();
 
     const handleSubmit = e => {
     e.preventDefault();
@@ -53,7 +53,7 @@ export default function SignUp() {
         firstName,
         lastName,
         address,
-        phoneNum,
+        phone,
         email,
         password
       })
@@ -113,14 +113,14 @@ export default function SignUp() {
                         </Grid>
                         <Grid item xs={12}>
                             <TextField
-                                value={phoneNum}
+                                value={phone}
                                 variant="outlined"
                                 fullWidth
-                                id="phoneNum"
+                                id="phone"
                                 label="Phone Number (optional)"
-                                name="phoneNum"
-                                autoComplete="phoneNum"
-                                onChange={e => setPhoneNum(e.target.value)}
+                                name="phone"
+                                autoComplete="phone"
+                                onChange={e => setPhone(e.target.value)}
                             />
                         </Grid>
                         <Grid item xs={12}>
