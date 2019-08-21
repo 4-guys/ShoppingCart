@@ -1,6 +1,6 @@
 import React from "react";
 import Carousel from '../component/Carousel'
-import ProductCard from '../component/ProductCard'
+import {ProductCard} from '../component/ProductCard'
 import Container from "@material-ui/core/Container"
 import Grid from '@material-ui/core/Grid';
 
