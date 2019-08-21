@@ -30,14 +30,14 @@ module.exports = function (sequelize, DataTypes) {
     },
     address: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: {
         len: [1]
       }
     },
     phone: {
       type: DataTypes.BIGINT,
-      allowNull: false,
+      allowNull: true,
     },
     password: {
       type: DataTypes.STRING,
