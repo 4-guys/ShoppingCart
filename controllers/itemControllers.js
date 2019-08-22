@@ -4,14 +4,18 @@ const db = require("../models");
 module.exports = {
   findAll: function(req, res) {
     db.Item
-      // .find(req.query)
-      .sort({ date: -1 })
+      .findAll()
+      // .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   findByItemName: function(req, res) {
     db.Item
-      .findByItemName(req.params.itemName)
+      .findAll({
+        where: {
+          itemCategory: req.params.itemName
+        }
+      })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

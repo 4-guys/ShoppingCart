@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
@@ -10,6 +10,7 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import API from '../utils/API';
 
 const useStyles = makeStyles(theme => ({
     '@global': {
@@ -38,6 +39,22 @@ const useStyles = makeStyles(theme => ({
 
 export default function Login() {
     const classes = useStyles();
+    
+        const [email, setEmail] = useState();
+        const [password, setPassword] = useState();
+    
+        const handleSubmit = e => {
+        e.preventDefault();
+        if (email && password) {
+          API.loginUser({
+            email,
+            password
+          })
+            .then(res => window.location.replace("/home"))
+            .catch(err => console.log(err));
+        }
+      };
+
 
     return (
         <Container component="main" maxWidth="xs">
@@ -46,8 +63,9 @@ export default function Login() {
                 <Typography component="h1" variant="h5">
                     Login
         </Typography>
-                <form className={classes.form} noValidate>
+                <form onSubmit={handleSubmit} className={classes.form} noValidate>
                     <TextField
+                        value={email}
                         variant="outlined"
                         margin="normal"
                         required
@@ -57,8 +75,10 @@ export default function Login() {
                         name="email"
                         autoComplete="email"
                         autoFocus
+                        onChange={e => setEmail(e.target.value)}
                     />
                     <TextField
+                        value={password}
                         variant="outlined"
                         margin="normal"
                         required
@@ -68,6 +88,7 @@ export default function Login() {
                         type="password"
                         id="password-input"
                         autoComplete="current-password"
+                        onChange={e => setPassword(e.target.value)}
                     />
                     <FormControlLabel
                         control={<Checkbox value="remember" color="primary" />}
