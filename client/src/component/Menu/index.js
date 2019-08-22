@@ -4,11 +4,13 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 
 
 const useStyles = makeStyles(theme => ({
     link: {
         margin: theme.spacing(1, 1.5),
+        color: '#4c345e'
       },
 }));
 
@@ -26,7 +28,7 @@ export default function SimpleMenu() {
 
   return (
     <div>
-      <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+      <Button aria-controls="simple-menu" color="textPrimary" aria-haspopup="true" onClick={handleClick} className={classes.link}>
         Products
       </Button>
       <Menu
@@ -36,30 +38,30 @@ export default function SimpleMenu() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose} >
-          <Link variant="button" color="textPrimary" href="/product"  className={classes.link}>
+        <Link href="/product"><MenuItem   onClick={handleClose} >
+          <Typography variant="button" color="textPrimary" href="/product"  className={classes.link}>
               Laptop
-            </Link></MenuItem>        
-            <MenuItem onClick={handleClose} >
-              <Link variant="button" color="textPrimary" href="/Mice"  className={classes.link}>
+            </Typography></MenuItem>  </Link>       
+            <Link href="/Mice"><MenuItem onClick={handleClose} >
+              <Typography variant="button" color="textPrimary" href="/Mice"  className={classes.link}>
               Mice
-            </Link></MenuItem>        
-            <MenuItem onClick={handleClose} >
-              <Link variant="button" color="textPrimary" href="/Mats"  className={classes.link}>
+            </Typography></MenuItem></Link>        
+            <Link href="/Mats"><MenuItem onClick={handleClose} >
+              <Typography variant="button" color="textPrimary" href="/Mats"  className={classes.link}>
               Mats
-            </Link></MenuItem>        
-            <MenuItem onClick={handleClose} >
-              <Link variant="button" color="textPrimary" href="/Keyboards"  className={classes.link}>
+            </Typography></MenuItem></Link>        
+            <Link  href="/Keyboards"><MenuItem onClick={handleClose} >
+              <Typography variant="button" color="textPrimary" href="/Keyboards"  className={classes.link}>
               Keyboards
-            </Link></MenuItem>        
-            <MenuItem onClick={handleClose} >
-              <Link variant="button" color="textPrimary" href="/Audio"  className={classes.link}>
+            </Typography></MenuItem></Link>        
+            <Link href="/Audio"><MenuItem onClick={handleClose} >
+              <Typography variant="button" color="textPrimary" href="/Audio"  className={classes.link}>
               Audio
-            </Link></MenuItem>        
-            <MenuItem onClick={handleClose} >
-              <Link variant="button" color="textPrimary" href="/Accesories"  className={classes.link}>
+            </Typography></MenuItem></Link>        
+            <Link href="/Accesories"><MenuItem onClick={handleClose} >
+              <Typography variant="button" color="textPrimary" href="/Accesories"  className={classes.link}>
               Accesories
-            </Link></MenuItem>       
+            </Typography></MenuItem></Link>       
       </Menu>
     </div>
   );

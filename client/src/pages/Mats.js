@@ -91,7 +91,7 @@ class Products extends Component {
                                 <ProductCard
                                     key={card.id}
                                     image={card.itemImg}
-                                    title={card.brandName}
+                                    title={card.brandName+" "+card.itemName}
                                     itemDescription={card.itemDescription}
                                 />))}
                         </ProductList>
