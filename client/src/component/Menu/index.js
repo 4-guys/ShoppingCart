@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles(theme => ({
     link: {
         margin: theme.spacing(1, 1.5),
+        color: '#4c345e'
       },
 }));
 
@@ -27,7 +28,7 @@ export default function SimpleMenu() {
 
   return (
     <div>
-      <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+      <Button aria-controls="simple-menu" color="textPrimary" aria-haspopup="true" onClick={handleClick} className={classes.link}>
         Products
       </Button>
       <Menu

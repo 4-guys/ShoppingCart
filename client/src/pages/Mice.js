@@ -7,6 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { ProductList, ProductCard } from '../component/ProductCard';
 import API from '../utils/API';
+import PropTypes from 'prop-types';
 
 
 // const useStyles = makeStyles(theme => ({
@@ -37,7 +38,7 @@ import API from '../utils/API';
 //     },
 
 // }));
-// const classes = useStyles();
+
 
 class Products extends Component {
     state = {
@@ -58,7 +59,7 @@ class Products extends Component {
     //     console.log(cards)
     // }
 
-
+    
     render() {
         return (
             <React.Fragment>
@@ -71,8 +72,8 @@ class Products extends Component {
                     <div
                     // className={classes.heroContent}
                     >
-                        <Container maxWidth="sm">
-                            <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+                        <Container maxWidth="sm" paddingTop= '10px'>
+                            <Typography  component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
                                 Mice
                             </Typography>
                             <Typography variant="h5" align="center" color="textSecondary" paragraph>
@@ -91,7 +92,7 @@ class Products extends Component {
                                 <ProductCard
                                     key={card.id}
                                     image={card.itemImg}
-                                    title={card.brandName}
+                                    title={card.brandName+" "+card.itemName}
                                     itemDescription={card.itemDescription}
                                 />))}
                         </ProductList>
