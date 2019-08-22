@@ -25,17 +25,18 @@ const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
-    // minHeight: '100vh',
-  },
-  main: {
-    marginTop: theme.spacing(8),
-    marginBottom: theme.spacing(2),
-  },
-  footer: {
     padding: theme.spacing(2),
     marginTop: 'auto',
-    backgroundColor: 'white',
+    background: 'linear-gradient(45deg, #ec2156 40%, #4c345e 70%)',
+    textAlign: 'center'
   },
+  main: {
+    marginTop: 'auto',
+    marginBottom: 'auto',
+    margin: theme.spacing(1, 1.5),
+    alignSelf: 'center'
+  },
+  
 }));
 
 export default function StickyFooter() {

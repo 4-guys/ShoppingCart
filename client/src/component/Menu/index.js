@@ -9,7 +9,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(theme => ({
     link: {
         margin: theme.spacing(1, 1.5),
-        color: '#ec2156'
+        color: '#4c345e'
       },
 }));
 

@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
   },
   appBar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
-    backgroundColor: '#4c345e'
+    background: 'linear-gradient(45deg, #4c345e 30%, #ec2156 90%)'
   },
   toolbar: {
     flexWrap: 'wrap',
@@ -39,7 +39,7 @@ const useStyles = makeStyles(theme => ({
   },
   link: {
     margin: theme.spacing(1, 1.5),
-    color: '#ec2156'
+    color: '#4c345e'
   },
   heroContent: {
     padding: theme.spacing(8, 0, 6),
@@ -57,7 +57,7 @@ const useStyles = makeStyles(theme => ({
     borderTop: `1px solid ${theme.palette.divider}`,
     marginTop: theme.spacing(8),
     paddingTop: theme.spacing(3),
-    paddingBottom: theme.spacing(3),
+    paddingBottom: theme.spacing(10),
     [theme.breakpoints.up('sm')]: {
       paddingTop: theme.spacing(6),
       paddingBottom: theme.spacing(6),
