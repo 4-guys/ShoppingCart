@@ -7,11 +7,18 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles(theme => ({
     cardGrid: {
         paddingTop: theme.spacing(8),
         paddingBottom: theme.spacing(8),
+    },
+    cardH: {
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        display: "inline"
     },
     card: {
         height: '100%',
@@ -32,10 +39,16 @@ const useStyles = makeStyles(theme => ({
 export function ProductList({children}){
     return <ul>{children}</ul> 
 }
-export function ProductCard(props) {
+export function ProductListHorizontal({children}){
+    const classes = useStyles();
+    return <ul className={classes.ul}>{children}</ul> 
+}
+export function GridCard(props) {
     const classes = useStyles();
 
     return (
+        <Grid item xs={12} sm={6} md={4}>
+
         <Card className={classes.card}>
             <CardMedia
                 className={classes.cardMedia}
@@ -60,6 +73,6 @@ export function ProductCard(props) {
 </Button>
             </CardActions>
         </Card>
+        </Grid>
     );
 }
-

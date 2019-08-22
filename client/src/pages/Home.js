@@ -1,12 +1,15 @@
 import React, { Component } from "react";
 import Carousel from '../component/Carousel'
-import { ProductList, ProductCardHorizontal } from '../component/ProductCard'
 import Container from "@material-ui/core/Container"
 import Grid from '@material-ui/core/Grid';
 import API from '../utils/API';
+import {GridCard,  } from '../component/GridCard'
+
 
 const divStyle = {
-    padding: '50px'
+    padding: '50px',
+    
+
 }
 
 class Home extends Component {
@@ -32,25 +35,21 @@ class Home extends Component {
                 </Container>
                 <Container>
                 <Grid
-                    // container
-                    // direction="row"
-                    // justify="center"
-                    // alignItems="center"
+                    container
+                    direction="row"
+                    justify="center"
+                    alignItems="center"
                     spacing={4}
                 >
 
-                    <ProductList >
                         {this.state.items.map(card => (
-                            <Grid item xs={12} sm={6} md={4} style={divStyle}>
-                                <ProductCardHorizontal
+                                <GridCard 
                                     key={card.id}
                                     image={card.itemImg}
                                     title={card.brandName + " " + card.itemName}
                                     itemDescription={card.itemDescription}
                                 />
-                            </Grid>
                         ))}
-                    </ProductList>
                 </Grid>
                 </Container>
 
