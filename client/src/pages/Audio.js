@@ -91,7 +91,7 @@ class Products extends Component {
                                 <ProductCard
                                     key={card.id}
                                     image={card.itemImg}
-                                    title={card.brandName}
+                                    title={card.brandName+" "+card.itemName}
                                     itemDescription={card.itemDescription}
                                 />))}
                         </ProductList>
@@ -111,18 +111,7 @@ class Products extends Component {
                             ))}
                         </Grid> */}
                     </Container>
-                    <Container
-                        // className={classes.cardGrid} 
-                        maxWidth="md">
-                        {/* End hero unit */}
-                        {/* <Grid container spacing={4}>
-                            {cards.map(card => (
-                                <Grid item key={card} xs={12} sm={6} md={4}>
-                                    <ProductCard></ProductCard>
-                                </Grid>
-                            ))}
-                        </Grid> */}
-                    </Container>
+
                 </main>
 
             </React.Fragment>
