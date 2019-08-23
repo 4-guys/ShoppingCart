@@ -36,10 +36,7 @@ export function ProductCard(props) {
     const classes = useStyles();
 
     return (
-<<<<<<< HEAD
-=======
         
->>>>>>> origin/calvin
                 <Card className={classes.card}>
                     <CardMedia
                         className={classes.cardMedia}
@@ -64,10 +61,7 @@ export function ProductCard(props) {
 </Button>
                     </CardActions>
                 </Card>
-<<<<<<< HEAD
-=======
       
->>>>>>> origin/calvin
     );
 }
 
