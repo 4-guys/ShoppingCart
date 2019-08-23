@@ -36,25 +36,20 @@ class Home extends Component {
                 <Container>
                 <Grid
                     container
-                    // direction="row"
-                    // justify="center"
-                    // alignItems="center"
+                    direction="row"
+                    justify="center"
+                    alignItems="center"
                     spacing={4}
                 >
-                <Grid item xs={12} sm={6} md={4} style={divStyle}>
-                    <ProductList >
+
                         {this.state.items.map(card => (
-                            
-                                <ProductCardHorizontal
+                                <GridCard 
                                     key={card.id}
                                     image={card.itemImg}
                                     title={card.brandName + " " + card.itemName}
                                     itemDescription={card.itemDescription}
                                 />
-                            
                         ))}
-                    </ProductList>
-                    </Grid>
                 </Grid>
                 </Container>
 
