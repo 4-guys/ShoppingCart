@@ -7,7 +7,6 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles(theme => ({
     cardGrid: {
@@ -37,8 +36,6 @@ export function ProductCard(props) {
     const classes = useStyles();
 
     return (
-        <Grid container spacing={4}>
-            <Grid item xs={12} sm={6} md={4}>
                 <Card className={classes.card}>
                     <CardMedia
                         className={classes.cardMedia}
@@ -63,8 +60,6 @@ export function ProductCard(props) {
 </Button>
                     </CardActions>
                 </Card>
-            </Grid>
-        </Grid>
     );
 }
 
