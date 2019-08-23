@@ -1,4 +1,4 @@
-var db = require("../../models");
+var db = require("../../../models");
 
 var users = [
     {
@@ -145,6 +145,28 @@ var products = [
         MSRP: 2000,
         ourPrice: 1500,
         itemID: 10
+    },
+    {
+        brandName: "Redragon",
+        itemName: "Gaming Keyboard",
+        itemDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        itemImg: "https://redragonusa.com/storage/3Oh4BwY88NHuPzUleloobMKLik589mZqryr4oTMO.png",
+        itemCategory: "Keyboards",
+        quantity: 500,
+        MSRP: 2000,
+        ourPrice: 1500,
+        itemID: 11
+    },
+    {
+        brandName: "Logitech",
+        itemName: "Gaming Keyboard",
+        itemDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        itemImg: "https://images-na.ssl-images-amazon.com/images/I/81X2lcJiwqL._SL1500_.jpg",
+        itemCategory: "Keyboards",
+        quantity: 500,
+        MSRP: 2000,
+        ourPrice: 1500,
+        itemID: 12
     },];
 
 async function makeData(Model, data) {

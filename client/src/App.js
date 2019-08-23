@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import NavBar from './component/NavBar'
+import NavBar from './component/NavBar';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from './pages/Home'
 import Login from './pages/Login'
@@ -15,6 +15,8 @@ import Accesories from "./pages/Accesories";
 import Checkout from "./pages/Checkout";
 import Footer from './component/Footer'
 import Contact from "./pages/Contact";
+import NavbarIn from './component/NavbarIn';
+
 
 class App extends Component {
   render() {
@@ -38,7 +40,6 @@ class App extends Component {
           <Footer/>
         </div>
       </Router>
-
     )
   }
 }

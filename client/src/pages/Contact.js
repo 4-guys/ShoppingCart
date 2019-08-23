@@ -14,8 +14,9 @@ import Michael from '../assets/images/Michael.jpeg';
 import Calvin from '../assets/images/Calvin.jpg';
 import Chris from '../assets/images/Chris.jpg';
 import Tai from '../assets/images/Tai.jpg';
-​
-​
+
+
+
 const useStyles = makeStyles(theme => ({
     icon: {
         marginRight: theme.spacing(2),
@@ -51,15 +52,15 @@ const useStyles = makeStyles(theme => ({
         width: '100%',
     }
 }));
-​
-​
+
+
 export default function Album() {
     const classes = useStyles();
-​
+
     return (
         <React.Fragment>
             <CssBaseline />
-​
+
             <main>
                 {/* Hero unit */}
                 <div className={classes.heroContent}>
@@ -67,7 +68,7 @@ export default function Album() {
                         <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
                             Developers
             </Typography>
-​
+
                     </Container>
                 </div>
                 <Container className={classes.cardGrid} maxWidth="md">
@@ -94,16 +95,16 @@ export default function Album() {
                                         LinkedIn
           </Button>
                                 </CardContent>
-​
+
                             </Card>
-​
+
                         </Grid>
-​
+
                         <Grid item xs={12} sm={6} md={3}>
                             <Card className="Michael">
                                 <CardMedia
                                     className={classes.cardMedia}
-​
+
                                     title="Michael"
                                 />
                                 <img src={Calvin} className={classes.michael}></img>
@@ -119,16 +120,16 @@ export default function Album() {
                                         LinkedIn
           </Button>
                                 </CardContent>
-​
+
                             </Card>
-​
+
                         </Grid>
-​
+
                         <Grid item xs={12} sm={6} md={3}>
                             <Card className="Michael">
                                 <CardMedia
                                     className={classes.cardMedia}
-​
+
                                     title="Michael"
                                 />
                                 <img src={Tai} className={classes.michael}></img>
@@ -143,18 +144,18 @@ export default function Album() {
                                     <Button href="https://www.linkedin.com/in/tai-nguyen-472b2b9a/" >
                                         LinkedIn
           </Button>
-​
+
                                 </CardContent>
-​
+
                             </Card>
-​
+
                         </Grid>
-​
+
                         <Grid item xs={12} sm={6} md={3}>
                             <Card className="Michael">
                                 <CardMedia
                                     className={classes.cardMedia}
-​
+
                                     title="Michael"
                                 />
                                 <img src={Chris} className={classes.michael}></img>
@@ -171,14 +172,14 @@ export default function Album() {
                                         LinkedIn
           </Button>
                                 </CardContent>
-​
+
                             </Card>
-​
+
                         </Grid>
-​
+
                     </Grid>
-​
-​
+
+
                 </Container>
             </main>
             {/* End footer */}
