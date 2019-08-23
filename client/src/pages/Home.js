@@ -7,7 +7,6 @@ import {GridCard,  } from '../component/GridCard'
 import { addToCart } from '../actions'
 
 
-
 const divStyle = {
     padding: '50px',
     

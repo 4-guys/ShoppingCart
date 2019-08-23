@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -9,6 +9,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import SimpleMenu from '../Menu'
 import images from '../../assets/images/Logo.jpg';
 import { Hidden } from '@material-ui/core';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 
 const useStyles = makeStyles(theme => ({
@@ -70,29 +71,45 @@ const useStyles = makeStyles(theme => ({
 export default function Pricing() {
   const classes = useStyles();
 
+  // const [login, setLogin] = useState(null);
+
+  // function handleLogin() {
+  //   if (!login) {
+  //     <Button href="/login" color="#727070" variant="outlined" className={classes.link}>
+  //       Login
+  //   </Button>
+  //   }
+  //   else {
+  //     <Button href="/logout" color="#727070" variant="outlined" className={classes.link}>
+  //       Logout
+  //   </Button>
+  //   }
+  // };
+
   return (
     <React.Fragment>
       <CssBaseline />
       <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
           <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-          <Link variant="h6" color="textPrimary" href="/home" underline='none' className={classes.link}>
-            <img src = {images} className = {classes.logo}></img>
+            <Link variant="h6" color="textPrimary" href="/home" underline='none' className={classes.link}>
+              <img src={images} className={classes.logo}></img>
             </Link>
           </Typography>
           <nav>
-           <SimpleMenu/>
+            <SimpleMenu />
 
             {/* <Link variant="button" color="textPrimary" href="/contact" className={classes.link}>
               Contact
             </Link> */}
           </nav>
-          <Button href="/contact"  className={classes.link}>
+          <Button href="/contact" className={classes.link}>
             Contact
           </Button>
+          <Button href="/checkout"><ShoppingCartIcon /></Button>
           <Button href="/login" color="#727070" variant="outlined" className={classes.link}>
             Login
-          </Button>
+    </Button>
         </Toolbar>
       </AppBar>
     </React.Fragment>

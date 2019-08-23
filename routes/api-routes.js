@@ -3,7 +3,7 @@ var db = require("../models");
 var passport = require("../config/passport")
 
 // Requiring our custom middleware for checking if a user is logged in
-var isAuthenticatedAdmin = require("../config/middleware/isAuthenticatedAdmin")
+var isAuthenticated = require("../config/middleware/isAuthenticated")
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -59,10 +59,15 @@ module.exports = function(app) {
   });
 
   // Route for getting some data about our user to be used client side
-  app.get("/api/admin_data", isAuthenticatedAdmin, function(req, res) {
-    db.User.findAll({}).then(function (users) {
-      res.json(users);
-    })
-  });
+  // app.get("/api/admin_data", isAuthenticated, function(req, res) {
+  //   db.User.findAll({}).then(function (users) {
+  //     res.json(users);
+  //   })
+  // });
+
+  app.get("/users",isAuthenticated, function (req, res) {
+    console.log("you're sign in");
+    res.sendFile(path.join(__dirname, "../views/layouts/events.html"));
+});
 
 };
