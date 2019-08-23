@@ -10,6 +10,14 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
+import Michael from '../assets/images/Michael.jpeg';
+import Calvin from '../assets/images/Calvin.jpg';
+import Chris from '../assets/images/Chris.jpg';
+import Tai from '../assets/images/Tai.jpg';
+import Mark from '../assets/images/Mark.jpg';
+import Calum from '../assets/images/Calum.jpeg';
+
+
 
 const useStyles = makeStyles(theme => ({
     icon: {
@@ -27,12 +35,13 @@ const useStyles = makeStyles(theme => ({
         paddingBottom: theme.spacing(8),
     },
     card: {
-        height: '100%',
+        height: '300px',
         display: 'flex',
         flexDirection: 'column',
     },
     cardMedia: {
-        paddingTop: '56.25%', // 16:9
+        paddingTop: '1px',
+        // 16:9
     },
     cardContent: {
         flexGrow: 1,
@@ -41,6 +50,9 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: theme.palette.background.paper,
         padding: theme.spacing(6),
     },
+    michael: {
+        height: '300px'
+    }
 }));
 
 
@@ -50,52 +62,174 @@ export default function Album() {
     return (
         <React.Fragment>
             <CssBaseline />
-            
+
             <main>
                 {/* Hero unit */}
                 <div className={classes.heroContent}>
                     <Container maxWidth="sm">
                         <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-                            Album layout
+                            Developers
             </Typography>
-                        <Typography variant="h5" align="center" color="textSecondary" paragraph>
-                            Something short and leading about the collection below—its contents, the creator, etc.
-                            Make it short and sweet, but not too short so folks don&apos;t simply skip over it
-                            entirely.
-            </Typography>
-                        
+
                     </Container>
                 </div>
                 <Container className={classes.cardGrid} maxWidth="md">
                     {/* End hero unit */}
                     <Grid container spacing={4}>
-                       
-                            <Grid item xs={12} sm={6} md={4}>
-                                <Card className="Michael">
-                                    <CardMedia
-                                        className={classes.cardMedia}
-                                        image="../assets/images/Michael.jpg"
-                                        title="Michael"
-                                    />
-                                    <CardContent className={classes.cardContent}>
-                                        <Typography gutterBottom variant="h5" component="h2">
-                                            Heading
+
+                        <Grid item xs={12} sm={6} md={4}>
+                            <Card className="Michael">
+                                <CardMedia
+                                    className={classes.cardMedia}
+
+                                    title="Michael"
+                                />
+                                <img src={Michael} className={classes.michael}></img>
+                                <CardContent className={classes.cardContent}>
+                                    <Typography gutterBottom variant="h5" component="h2">
+                                        Michael Eguina
                     </Typography>
-                                        <Typography>
-                                            This is a media card. You can use this section to describe the content.
+                                    <Typography gutterBottom variant="h7" >
+                                        Email: michael@corner-exit.com
                     </Typography>
-                                    </CardContent>
-                                    <CardActions>
-                                        <Button size="small" color="primary">
-                                            View
-                    </Button>
-                                        <Button size="small" color="primary">
-                                            Edit
-                    </Button>
-                                    </CardActions>
-                                </Card>
-                            </Grid>
+                                    <br></br>
+                                    <Button href="https://www.linkedin.com/in/michael-eguina-67b6984a/" >
+                                        LinkedIn
+          </Button>
+                                </CardContent>
+
+                            </Card>
+
+                        </Grid>
+
+                        <Grid item xs={12} sm={6} md={4}>
+                            <Card className="Michael">
+                                <CardMedia
+                                    className={classes.cardMedia}
+
+                                    title="Michael"
+                                />
+                                <img src={Calvin} className={classes.michael}></img>
+                                <CardContent className={classes.cardContent}>
+                                    <Typography gutterBottom variant="h5" component="h2">
+                                        Calvin Vo
+                    </Typography>
+                                    <Typography gutterBottom variant="h7">
+                                        Email: calvinctvodesign@gmail.com
+                    </Typography>
+                                    <br></br>
+                                    <Button href="://www.pornhub.com/" >
+                                        DONT PICK ME
+          </Button>
+                                </CardContent>
+
+                            </Card>
+
+                        </Grid>
+
+                        <Grid item xs={12} sm={6} md={4}>
+                            <Card className="Michael">
+                                <CardMedia
+                                    className={classes.cardMedia}
+
+                                    title="Michael"
+                                />
+                                <img src={Tai} className={classes.michael}></img>
+                                <CardContent className={classes.cardContent}>
+                                    <Typography gutterBottom variant="h5" component="h2">
+                                        Tai Nguyen
+                    </Typography>
+                                    <Typography gutterBottom variant="h7">
+                                        Email: taing89@gmail.com
+                    </Typography>
+                                    <br></br>
+                                    <Button href="https://www.linkedin.com/in/tai-nguyen-472b2b9a/" >
+                                        LinkedIn
+          </Button>
+
+                                </CardContent>
+
+                            </Card>
+
+                        </Grid>
+
+                        <Grid item xs={12} sm={6} md={4}>
+                            <Card className="Michael">
+                                <CardMedia
+                                    className={classes.cardMedia}
+
+                                    title="Michael"
+                                />
+                                <img src={Chris} className={classes.michael}></img>
+                                <CardContent className={classes.cardContent}>
+                                    <Typography gutterBottom variant="h5" component="h2">
+                                        Chris Cudiamat
+                    </Typography>
+                                    <Typography gutterBottom variant="h7">
+                                        Email: ccudiamat93@gmail.com
+                    </Typography>
+                                    <br></br>
+                                    <Button href="https://www.linkedin.com/in/christopher-cudiamat-265890184/
+" >
+                                        LinkedIn
+          </Button>
+                                </CardContent>
+
+                            </Card>
+
+                        </Grid>
+
+                        <Grid item xs={12} sm={6} md={4}>
+                            <Card className="Michael">
+                                <CardMedia
+                                    className={classes.cardMedia}
+
+                                    title="Michael"
+                                />
+                                <img src={Mark} className={classes.michael}></img>
+                                <CardContent className={classes.cardContent}>
+                                    <Typography gutterBottom variant="h5" component="h2">
+                                        Mark Pascua
+                    </Typography>
+                                    <Typography gutterBottom variant="h7">
+                                        Email:
+                    </Typography>
+                                    <br></br>
+                                    <Typography gutterBottom variant="h7">
+                                        LinkedIn:
+                    </Typography>
+                                </CardContent>
+
+                            </Card>
+                        </Grid>
+
+                        <Grid item xs={12} sm={6} md={4}>
+                            <Card className="Michael">
+                                <CardMedia
+                                    className={classes.cardMedia}
+
+                                    title="Michael"
+                                />
+                                <img src={Calum} className={classes.michael}></img>
+                                <CardContent className={classes.cardContent}>
+                                    <Typography gutterBottom variant="h5" component="h2">
+                                        Calum Ragan
+                    </Typography>
+                                    <Typography gutterBottom variant="h7">
+                                        Email:
+                    </Typography>
+                                    <br></br>
+                                    <Typography gutterBottom variant="h7">
+                                        LinkedIn:
+                    </Typography>
+                                </CardContent>
+
+                            </Card>
+                        </Grid>
+
                     </Grid>
+
+
                 </Container>
             </main>
             {/* End footer */}

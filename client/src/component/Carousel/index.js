@@ -13,29 +13,28 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const tutorialSteps = [
   {
-    label: 'San Francisco – Oakland Bay Bridge, United States',
-    imgPath:
-      'https://source.unsplash.com/random',
+    label: 'Razer Blade Stealth',
+    imgPath: 'https://assets.pcmag.com/media/images/478709-razer-blade-stealth-8th-gen-cpu.jpg?width=810&height=456',
   },
   {
-    label: 'Bird',
+    label: 'Alienware Laptop',
     imgPath:
-      'https://source.unsplash.com/random',
+      'http://i.dell.com/sites/csimages/Video_Imagery/all/roll-up-aw-m15.png',
   },
   {
-    label: 'Bali, Indonesia',
+    label: 'Naga Mouse',
     imgPath:
-      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
+      'https://d4kkpd69xt9l7.cloudfront.net/sys-master/root/he1/h79/8909576994846/Razer_Naga_Trinity_09.jpg',
   },
   {
-    label: 'NeONBRAND Digital Marketing, Las Vegas, United States',
+    label: 'Logitech headphones',
     imgPath:
-      'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://assets.pcmag.com/media/images/552608-logitech-g935.jpg?width=810&height=456',
   },
   {
-    label: 'Goč, Serbia',
+    label: 'Netgear Router',
     imgPath:
-      'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://images-na.ssl-images-amazon.com/images/I/81K4IHoxEHL._SL1500_.jpg',
   },
 ];
 
