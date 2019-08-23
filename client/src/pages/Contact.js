@@ -14,8 +14,6 @@ import Michael from '../assets/images/Michael.jpeg';
 import Calvin from '../assets/images/Calvin.jpg';
 import Chris from '../assets/images/Chris.jpg';
 import Tai from '../assets/images/Tai.jpg';
-import Mark from '../assets/images/Mark.jpg';
-import Calum from '../assets/images/Calum.jpeg';
 
 
 
@@ -51,7 +49,7 @@ const useStyles = makeStyles(theme => ({
         padding: theme.spacing(6),
     },
     michael: {
-        height: '300px'
+        width: '100%',
     }
 }));
 
@@ -75,9 +73,9 @@ export default function Album() {
                 </div>
                 <Container className={classes.cardGrid} maxWidth="md">
                     {/* End hero unit */}
-                    <Grid container spacing={4}>
+                    <Grid container spacing={2}>
 
-                        <Grid item xs={12} sm={6} md={4}>
+                        <Grid item xs={12} sm={6} md={3}>
                             <Card className="Michael">
                                 <CardMedia
                                     className={classes.cardMedia}
@@ -102,7 +100,7 @@ export default function Album() {
 
                         </Grid>
 
-                        <Grid item xs={12} sm={6} md={4}>
+                        <Grid item xs={12} sm={6} md={3}>
                             <Card className="Michael">
                                 <CardMedia
                                     className={classes.cardMedia}
@@ -127,7 +125,7 @@ export default function Album() {
 
                         </Grid>
 
-                        <Grid item xs={12} sm={6} md={4}>
+                        <Grid item xs={12} sm={6} md={3}>
                             <Card className="Michael">
                                 <CardMedia
                                     className={classes.cardMedia}
@@ -153,7 +151,7 @@ export default function Album() {
 
                         </Grid>
 
-                        <Grid item xs={12} sm={6} md={4}>
+                        <Grid item xs={12} sm={6} md={3}>
                             <Card className="Michael">
                                 <CardMedia
                                     className={classes.cardMedia}
@@ -177,54 +175,6 @@ export default function Album() {
 
                             </Card>
 
-                        </Grid>
-
-                        <Grid item xs={12} sm={6} md={4}>
-                            <Card className="Michael">
-                                <CardMedia
-                                    className={classes.cardMedia}
-
-                                    title="Michael"
-                                />
-                                <img src={Mark} className={classes.michael}></img>
-                                <CardContent className={classes.cardContent}>
-                                    <Typography gutterBottom variant="h5" component="h2">
-                                        Mark Pascua
-                    </Typography>
-                                    <Typography gutterBottom variant="h7">
-                                        Email:
-                    </Typography>
-                                    <br></br>
-                                    <Typography gutterBottom variant="h7">
-                                        LinkedIn:
-                    </Typography>
-                                </CardContent>
-
-                            </Card>
-                        </Grid>
-
-                        <Grid item xs={12} sm={6} md={4}>
-                            <Card className="Michael">
-                                <CardMedia
-                                    className={classes.cardMedia}
-
-                                    title="Michael"
-                                />
-                                <img src={Calum} className={classes.michael}></img>
-                                <CardContent className={classes.cardContent}>
-                                    <Typography gutterBottom variant="h5" component="h2">
-                                        Calum Ragan
-                    </Typography>
-                                    <Typography gutterBottom variant="h7">
-                                        Email:
-                    </Typography>
-                                    <br></br>
-                                    <Typography gutterBottom variant="h7">
-                                        LinkedIn:
-                    </Typography>
-                                </CardContent>
-
-                            </Card>
                         </Grid>
 
                     </Grid>
