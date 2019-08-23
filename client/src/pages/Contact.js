@@ -73,12 +73,12 @@ export default function Album() {
                 <Container className={classes.cardGrid} maxWidth="md">
                     {/* End hero unit */}
                     <Grid container spacing={2}>
-​
+
                         <Grid item xs={12} sm={6} md={3}>
                             <Card className="Michael">
                                 <CardMedia
                                     className={classes.cardMedia}
-​
+
                                     title="Michael"
                                 />
                                 <img src={Michael} className={classes.michael}></img>
