@@ -9,6 +9,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import SimpleMenu from '../Menu'
 import images from '../../assets/images/Logo.jpg';
 import { Hidden } from '@material-ui/core';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 
 const useStyles = makeStyles(theme => ({
@@ -105,6 +106,7 @@ export default function Pricing() {
           <Button href="/contact" className={classes.link}>
             Contact
           </Button>
+          <Button href="/checkout"><ShoppingCartIcon /></Button>
           <Button href="/login" color="#727070" variant="outlined" className={classes.link}>
             Login
     </Button>
