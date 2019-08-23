@@ -4,6 +4,8 @@ import Container from "@material-ui/core/Container"
 import Grid from '@material-ui/core/Grid';
 import API from '../utils/API';
 import {GridCard,  } from '../component/GridCard'
+import { addToCart } from '../actions'
+
 
 
 const divStyle = {
@@ -22,8 +24,10 @@ class Home extends Component {
     getItems = () => {
         API.getItems().then(items => this.setState({ items }))
     }
-
-
+    handleClick = (id) => () => {
+        console.log(id);
+       addToCart(id)
+      }
     render() {
         return (
 
@@ -48,6 +52,7 @@ class Home extends Component {
                                     image={card.itemImg}
                                     title={card.brandName + " " + card.itemName}
                                     itemDescription={card.itemDescription}
+                                    handleToggle={this.handleClick(card.id)}
                                 />
                         ))}
                 </Grid>

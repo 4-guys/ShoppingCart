@@ -15,6 +15,7 @@ import Accesories from "./pages/Accesories";
 import Checkout from "./pages/Checkout";
 import Footer from './component/Footer'
 import Contact from "./pages/Contact";
+import Cart from "./pages/testshoppingcart"
 
 class App extends Component {
   render() {
@@ -29,7 +30,7 @@ class App extends Component {
           <Route exact path="/productDetails" component={ProductDetails}/>          
           <Route exact path="/product" component={Product}/>
           <Route exact path="/checkout" component={Checkout}/>
-          <Route exact path="/contact" component={Contact}/>
+          <Route exact path="/contact" component={Cart}/>
           <Route exact path="/Mats" component={Mats}/>
           <Route exact path="/Mice" component={Mice}/>
           <Route exact path="/Keyboards" component={Keyboards}/>
