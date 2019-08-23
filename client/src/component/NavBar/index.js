@@ -10,6 +10,7 @@ import SimpleMenu from '../Menu'
 import images from '../../assets/images/Logo.jpg';
 import { Hidden } from '@material-ui/core';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import API from '../../utils/API';
 
 
 const useStyles = makeStyles(theme => ({
@@ -65,9 +66,10 @@ const useStyles = makeStyles(theme => ({
     },
   },
 }));
-
-
-
+const loginState= sessionStorage.getItem('login')
+const logout = function() {
+  console.log("clicked")
+  API.logoutUser()}
 export default function Pricing() {
   const classes = useStyles();
 
@@ -107,9 +109,12 @@ export default function Pricing() {
             Contact
           </Button>
           <Button href="/checkout"><ShoppingCartIcon /></Button>
+          {!loginState ? 
           <Button href="/login" color="#727070" variant="outlined" className={classes.link}>
             Login
-    </Button>
+    </Button> :           <Button onClick={logout} href="/home" color="#727070" variant="outlined" className={classes.link}>
+            Logout
+          </Button> }
         </Toolbar>
       </AppBar>
     </React.Fragment>
