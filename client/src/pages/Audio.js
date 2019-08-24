@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import { ProductList, ProductCard } from '../component/ProductCard';
 import API from '../utils/API';
+import { addToCart } from '../actions'
 
 
 const divStyle={
@@ -20,6 +21,11 @@ class Products extends Component {
     getItems = () => {
         API.getItem("Audio").then(items => this.setState({ items }))
     }
+
+       handleClick = (id) => () => {
+        console.log(id);
+       addToCart(id)
+      }
 
     render() {
         return (
@@ -56,6 +62,8 @@ class Products extends Component {
                                     image={card.itemImg}
                                     title={card.brandName + " " + card.itemName}
                                     itemDescription={card.itemDescription}
+                                    handleToggle={this.handleClick(card.id)}
+
                                 />
                                 </Container>
 ))}
