@@ -7,7 +7,6 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles(theme => ({
     cardGrid: {
@@ -54,7 +53,7 @@ export function ProductCard(props) {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <Button size="small" color="primary">
+                        <Button onClick={props.handleToggle} size="small" color="primary">
                             Add to Cart
 </Button>
                         <Button href="/checkout" size="small" color="primary">
