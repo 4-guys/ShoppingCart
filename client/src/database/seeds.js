@@ -1,4 +1,4 @@
-var db = require("../../models");
+var db = require("../../../models");
 
 var users = [
     {
@@ -35,7 +35,7 @@ var users = [
     },
 ];
 
-var products = [
+var items = [
     {
         brandName: "Alienware",
         itemName: "Laptop",
@@ -178,7 +178,7 @@ async function makeData(Model, data) {
     return items;
 }
 db.sequelize.sync({ force: true }).then(async function () {
-    await makeData(db.Items, products);
+    await makeData(db.Item, items);
     await makeData(db.User, users);
     // await makeData(db.UserSignup, userSignups);
     db.sequelize.close();
