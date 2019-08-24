@@ -53,7 +53,7 @@ export function ProductCard(props) {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <Button size="small" color="primary">
+                        <Button onClick={props.handleToggle} size="small" color="primary">
                             Add to Cart
 </Button>
                         <Button href="/checkout" size="small" color="primary">
