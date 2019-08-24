@@ -38,6 +38,7 @@ module.exports = function(app) {
 
   // Route for logging user out
   app.get("/logout", function(req, res) {
+    sessionStorage.removeItem('login')
     req.logout();
     res.redirect("/");
   });

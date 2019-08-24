@@ -27,7 +27,6 @@ class Home extends Component {
         console.log(id);
        addToCart(id)
       }
-
     render() {
         return (
 
