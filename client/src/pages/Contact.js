@@ -172,14 +172,14 @@ export default function Album() {
                                         LinkedIn
           </Button>
                                 </CardContent>
-
+​
                             </Card>
-
+​
                         </Grid>
-
+​
                     </Grid>
-
-
+​
+​
                 </Container>
             </main>
             {/* End footer */}
