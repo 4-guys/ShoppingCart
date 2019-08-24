@@ -20,9 +20,10 @@ class Products extends Component {
         this.getItems();
     };
     getItems = () => {
-        API.getItem("laptop").then(items => this.setState({ items }))
+        API.getItem("Laptop").then(items => this.setState({ items }))
     }
-    handleClick = (id) => () => {
+
+       handleClick = (id) => () => {
         console.log(id);
        addToCart(id)
       }
