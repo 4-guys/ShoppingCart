@@ -15,7 +15,6 @@ import Accesories from "./pages/Accesories";
 import Checkout from "./pages/Checkout";
 import Footer from './component/Footer'
 import Contact from "./pages/Contact";
-import NavbarIn from './component/NavbarIn';
 
 
 class App extends Component {

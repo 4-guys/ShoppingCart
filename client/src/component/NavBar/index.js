@@ -37,7 +37,8 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   },
   logo: {
-    height: '40px',
+    height: '65px',
+    paddingTop: '10px'
   },
   link: {
     margin: theme.spacing(1, 1.5),
