@@ -167,6 +167,28 @@ var products = [
         MSRP: 2000,
         ourPrice: 1500,
         itemID: 12
+    },
+    {
+        brandName: "Blazer",
+        itemName: "Gaming Mouse",
+        itemDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        itemImg: "https://d4kkpd69xt9l7.cloudfront.net/sys-master/root/he1/h79/8909576994846/Razer_Naga_Trinity_09.jpg",
+        itemCategory: "Gaming Mouse",
+        quantity: 500,
+        MSRP: 2000,
+        ourPrice: 100,
+        itemID: 13
+    },
+    {
+        brandName: "Blazer",
+        itemName: "Laptop",
+        itemDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        itemImg: "https://assets.pcmag.com/media/images/478709-razer-blade-stealth-8th-gen-cpu.jpg?width=810&height=456",
+        itemCategory: "Laptop",
+        quantity: 500,
+        MSRP: 2000,
+        ourPrice: 100,
+        itemID: 13
     },];
 
 async function makeData(Model, data) {
@@ -178,7 +200,7 @@ async function makeData(Model, data) {
     return items;
 }
 db.sequelize.sync({ force: true }).then(async function () {
-    await makeData(db.Items, products);
+    await makeData(db.Item, products);
     await makeData(db.User, users);
     // await makeData(db.UserSignup, userSignups);
     db.sequelize.close();
