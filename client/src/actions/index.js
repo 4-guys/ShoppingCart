@@ -1,4 +1,4 @@
-export const addToCart = (productId) =>  {
+export const addToCart = (productId, price) =>  {
     let cart = localStorage.getItem('cart') 
                   ? JSON.parse(localStorage.getItem('cart')) : {};
     let id = productId.toString();
@@ -10,5 +10,5 @@ export const addToCart = (productId) =>  {
       cart[id] = qty
     // }
     localStorage.setItem('cart', JSON.stringify(cart));
-  console.log(localStorage.cart)
+  console.log(localStorage.cart + price)
   }

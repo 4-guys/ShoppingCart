@@ -31,17 +31,17 @@ const useStyles = makeStyles(theme => ({
     cardContent: {
         flexGrow: 1,
     },
-    ul:{
+    ul: {
         listStyleType: "none"
     }
 }))
 
-export function ProductList({children}){
-    return <ul>{children}</ul> 
+export function ProductList({ children }) {
+    return <ul>{children}</ul>
 }
-export function ProductListHorizontal({children}){
+export function ProductListHorizontal({ children }) {
     const classes = useStyles();
-    return <ul className={classes.ul}>{children}</ul> 
+    return <ul className={classes.ul}>{children}</ul>
 }
 export function GridCard(props) {
     const classes = useStyles();
@@ -49,30 +49,32 @@ export function GridCard(props) {
     return (
         <Grid item xs={12} sm={6} md={4}>
 
-        <Card className={classes.card}>
-            <CardMedia
-                className={classes.cardMedia}
-                image={props.image}
-                title="Image title"
-            />
-            <CardContent className={classes.cardContent}>
-                <Button href="/productDetails">
-                    <Typography gutterBottom variant="h5" component="h2">
-                        {props.title}
+            <Card className={classes.card}>
+                <CardMedia
+                    className={classes.cardMedia}
+                    image={props.image}
+                    title="Image title"
+                />
+                <CardContent className={classes.cardContent}>
+                    <Button href="/productDetails">
+                        <Typography gutterBottom variant="h5" component="h2">
+                            {props.title}
+                        </Typography>
+                    </Button>        <Typography>
+                        {props.itemDescription}
+                    </Typography><Typography>
+                        $ {props.ourPrice}
                     </Typography>
-                </Button>        <Typography>
-                    {props.itemDescription}
-</Typography>
-            </CardContent>
-            <CardActions>
-                <Button onClick={props.handleToggle} size="small" color="primary">
-                    Add to Cart
+                </CardContent>
+                <CardActions>
+                    <Button onClick={props.handleToggle} size="small" color="primary">
+                        Add to Cart
 </Button>
-                <Button href="/checkout" size="small" color="primary">
-                    Checkout
+                    <Button href="/checkout" size="small" color="primary">
+                        Checkout
 </Button>
-            </CardActions>
-        </Card>
+                </CardActions>
+            </Card>
         </Grid>
     );
 }

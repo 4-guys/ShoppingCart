@@ -23,9 +23,9 @@ class Home extends Component {
     getItems = () => {
         API.getItem("laptop").then(items => this.setState({ items }))
     }
-    handleClick = (id) => () => {
-        console.log(id);
-       addToCart(id)
+    handleClick = (id, price) => () => {
+        console.log(id + price);
+       addToCart(id, price)
       }
     render() {
         return (
@@ -51,7 +51,8 @@ class Home extends Component {
                                     image={card.itemImg}
                                     title={card.brandName + " " + card.itemName}
                                     itemDescription={card.itemDescription}
-                                    handleToggle={this.handleClick(card.id)}
+                                    ourPrice={card.ourPrice}
+                                    handleToggle={this.handleClick(card.id, card.ourPrice)}
                                 />
                         ))}
                 </Grid>
