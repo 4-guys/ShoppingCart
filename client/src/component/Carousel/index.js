@@ -48,7 +48,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     height: 50,
     paddingLeft: theme.spacing(4),
-    backgroundColor: theme.palette.background.default,
+    background: 'linear-gradient(30deg, #f0e8ea 20%, #fafafa 90%)'
   },
   img: {
     display: 'block',

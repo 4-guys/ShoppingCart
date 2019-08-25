@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { shadows } from '@material-ui/system';
 
 const useStyles = makeStyles(theme => ({
     cardGrid: {
@@ -17,6 +18,9 @@ const useStyles = makeStyles(theme => ({
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
+        background: 'linear-gradient(30deg, #4c345e 20%, #ec2156 90%)',
+        color:'white',
+        boxShadow:'100px'
     },
     cardMedia: {
         paddingTop: '56.25%', // 16:9
@@ -45,18 +49,20 @@ export function ProductCard(props) {
                     />
                     <CardContent className={classes.cardContent}>
                         <Button href="/productDetails">
-                            <Typography gutterBottom variant="h5" component="h2">
+                            <Typography gutterBottom variant="h5" component="h2" style={{color:'#e23674'}}>
                                 {props.title}
                             </Typography>
                         </Button>        <Typography>
                             {props.itemDescription}
-                        </Typography>
+                        </Typography><Typography>
+                        $ {props.ourPrice}
+                    </Typography>
                     </CardContent>
                     <CardActions>
-                        <Button onClick={props.handleToggle} size="small" color="primary">
+                        <Button onClick={props.handleToggle} size="small" style={{color:'#ec2156'}} >
                             Add to Cart
 </Button>
-                        <Button href="/checkout" size="small" color="primary">
+                        <Button href="/checkout" size="small" style={{color:'#ec2156'}}>
                             Checkout
 </Button>
                     </CardActions>

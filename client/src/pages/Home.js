@@ -23,20 +23,20 @@ class Home extends Component {
     getItems = () => {
         API.getItem("laptop").then(items => this.setState({ items }))
     }
-    handleClick = (id, price) => () => {
-        console.log(id + price);
-       addToCart(id, price)
+    handleClick = (id) => () => {
+        console.log(id);
+       addToCart(id)
       }
     render() {
         return (
 
             <React.Fragment>
 
-                <Container maxWidth="lg">
+                <Container style={divStyle} maxWidth="lg">
 
                     <Carousel />
                 </Container>
-                <Container>
+                <Container style={divStyle}>
                 <Grid
                     container
                     direction="row"
@@ -52,7 +52,7 @@ class Home extends Component {
                                     title={card.brandName + " " + card.itemName}
                                     itemDescription={card.itemDescription}
                                     ourPrice={card.ourPrice}
-                                    handleToggle={this.handleClick(card.id, card.ourPrice)}
+                                    handleToggle={this.handleClick(card.id)}
                                 />
                         ))}
                 </Grid>
