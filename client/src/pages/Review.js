@@ -5,6 +5,40 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Grid from '@material-ui/core/Grid';
+import API from '../utils/API';
+
+//// local storage cart
+function getItems (){
+    API.getItems().then(function(res){
+        itemsAll=res
+    })
+}
+
+function cart(){
+    getItems().then(console.log(itemsAll))
+        let cart = localStorage.getItem('cart');
+        // if (!cart) return; 
+        // getCartProducts(cart).then((products) => {
+        //   let total = 0;
+        //   for (var i = 0; i < products.length; i++) {
+        //     total += products[i].price * products[i].qty;
+        //   }
+        //   this.setState({ products, total });
+        //   });
+      console.log(cart)
+      var arr= cart.split(",")
+      for(var i=1;i<arr.length-1;i++){
+            var keyVal=arr[i].split(':')
+            var str2 = keyVal[0].replace (/"/g, "")
+          console.log(str2 + "quantity: "+keyVal[1])
+      }
+};
+
+
+ 
+
+////
+let itemsAll ={}
 
 const products = [
     { name: 'Product 1', desc: 'A nice thing', price: '$9.99' },
@@ -35,7 +69,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Review() {
     const classes = useStyles();
-
+cart()
     return (
         <React.Fragment>
             <Typography variant="h6" gutterBottom>
