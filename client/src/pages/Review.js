@@ -6,42 +6,49 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Grid from '@material-ui/core/Grid';
 import API from '../utils/API';
+import { pseudoRandomBytes } from 'crypto';
+import { Card } from '@material-ui/core';
 
 //// local storage cart
-function getItems (){
-    API.getItems().then(function(res){
-        itemsAll=res
-    })
-}
+// getItems = () => {    API.getItems().then(function(res){
+//         itemsAll=res
+//     })
+// }
 
-function cart(){
-    getItems().then(console.log(itemsAll))
+async function cart(){
+    await API.getItems().then(items=> itemsAll=items)
         let cart = localStorage.getItem('cart');
-        // if (!cart) return; 
-        // getCartProducts(cart).then((products) => {
-        //   let total = 0;
-        //   for (var i = 0; i < products.length; i++) {
-        //     total += products[i].price * products[i].qty;
-        //   }
-        //   this.setState({ products, total });
-        //   });
-      console.log(cart)
+      console.log(itemsAll)
       var arr= cart.split(",")
+      var purchasedProdId=[]
       for(var i=1;i<arr.length-1;i++){
             var keyVal=arr[i].split(':')
             var str2 = keyVal[0].replace (/"/g, "")
           console.log(str2 + "quantity: "+keyVal[1])
+          purchasedProdId.push(str2)
       }
+      for(var j=0;j<itemsAll.length;j++){
+          for(var k=0;k<purchasedProdId.length;k++){
+          if(j==purchasedProdId[k])  
+          {
+              console.log(itemsAll[j].brandName)
+              var newProduct= { name: itemsAll[j].brandName, desc: itemsAll[j].itemDescription, price: itemsAll[j].ourPrice }
+              products.push(newProduct)
+              console.log(newProduct)
+          }
+        }
+      }
+      productPush=true
+      console.log(products)
 };
 
 
  
 
 ////
-let itemsAll ={}
-
+let itemsAll;
+let productPush= false
 const products = [
-    { name: 'Product 1', desc: 'A nice thing', price: '$9.99' },
     { name: 'Product 2', desc: 'Another thing', price: '$3.45' },
     { name: 'Product 3', desc: 'Something else', price: '$6.51' },
     { name: 'Product 4', desc: 'Best thing of all', price: '$14.11' },
@@ -66,10 +73,10 @@ const useStyles = makeStyles(theme => ({
         marginTop: theme.spacing(2),
     },
 }));
-
-export default function Review() {
-    const classes = useStyles();
 cart()
+export default  function Review() {
+    const classes = useStyles();
+
     return (
         <React.Fragment>
             <Typography variant="h6" gutterBottom>
