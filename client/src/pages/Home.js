@@ -21,7 +21,7 @@ class Home extends Component {
         this.getItems();
     };
     getItems = () => {
-        API.getItems().then(items => this.setState({ items }))
+        API.getItem("laptop").then(items => this.setState({ items }))
     }
     handleClick = (id) => () => {
         console.log(id);
