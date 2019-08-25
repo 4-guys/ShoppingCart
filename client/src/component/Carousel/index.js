@@ -27,7 +27,7 @@ const tutorialSteps = [
       'https://d4kkpd69xt9l7.cloudfront.net/sys-master/root/he1/h79/8909576994846/Razer_Naga_Trinity_09.jpg',
   },
   {
-    label: 'Logitech headphones',
+    label: 'Logitech Headphones',
     imgPath:
       'https://assets.pcmag.com/media/images/552608-logitech-g935.jpg?width=810&height=456',
   },

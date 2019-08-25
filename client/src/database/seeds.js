@@ -55,7 +55,7 @@ var products = [
         itemCategory: "Laptop",
         quantity: 100,
         MSRP: 2000,
-        ourPrice: 1500,
+        ourPrice: 1600,
         itemID: 2
     },
     {
@@ -87,8 +87,8 @@ var products = [
         itemImg: "https://cdn.shopify.com/s/files/1/1693/6515/products/fanduco-mice-demon-hunter-gaming-mouse-with-9-programmable-buttons-27424611219_2000x.jpg?v=1509179865",
         itemCategory: "Gaming Mouse",
         quantity: 500,
-        MSRP: 2000,
-        ourPrice: 1500,
+        MSRP: 100,
+        ourPrice: 70,
         itemID: 5
     },
     {
@@ -98,8 +98,8 @@ var products = [
         itemImg: "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1537996771-logitech-g502-gaming-mouse-1537996751.jpg",
         itemCategory: "Gaming Mouse",
         quantity: 500,
-        MSRP: 2000,
-        ourPrice: 1500,
+        MSRP: 150,
+        ourPrice: 100,
         itemID: 6
     },
     {
@@ -109,8 +109,8 @@ var products = [
         itemImg: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6320/6320789_rd.jpg",
         itemCategory: "Audio",
         quantity: 500,
-        MSRP: 2000,
-        ourPrice: 1500,
+        MSRP: 70,
+        ourPrice: 55,
         itemID: 7
     },
     {
@@ -120,8 +120,8 @@ var products = [
         itemImg: "http://redragonusa.com/storage/AORQZnOO5AFtvL6uRqlWvDOPg00HYaK9UW2yp2kH.png",
         itemCategory: "Audio",
         quantity: 500,
-        MSRP: 2000,
-        ourPrice: 1500,
+        MSRP: 100,
+        ourPrice: 70,
         itemID: 8
     },
     {
@@ -131,8 +131,8 @@ var products = [
         itemImg: "https://cdn.shopify.com/s/files/1/0176/3274/products/hdmi-5m_1024x1024.jpg?v=1561293417",
         itemCategory: "Accessories",
         quantity: 500,
-        MSRP: 2000,
-        ourPrice: 1500,
+        MSRP: 20,
+        ourPrice: 15,
         itemID: 9
     },
     {
@@ -142,8 +142,8 @@ var products = [
         itemImg: "https://images-na.ssl-images-amazon.com/images/I/81K4IHoxEHL._SL1500_.jpg",
         itemCategory: "Accessories",
         quantity: 500,
-        MSRP: 2000,
-        ourPrice: 1500,
+        MSRP: 100,
+        ourPrice: 90,
         itemID: 10
     },
     {
@@ -153,8 +153,8 @@ var products = [
         itemImg: "https://redragonusa.com/storage/3Oh4BwY88NHuPzUleloobMKLik589mZqryr4oTMO.png",
         itemCategory: "Keyboards",
         quantity: 500,
-        MSRP: 2000,
-        ourPrice: 1500,
+        MSRP: 150,
+        ourPrice: 125,
         itemID: 11
     },
     {
@@ -164,8 +164,8 @@ var products = [
         itemImg: "https://images-na.ssl-images-amazon.com/images/I/81X2lcJiwqL._SL1500_.jpg",
         itemCategory: "Keyboards",
         quantity: 500,
-        MSRP: 2000,
-        ourPrice: 1500,
+        MSRP: 175,
+        ourPrice: 150,
         itemID: 12
     },];
 
