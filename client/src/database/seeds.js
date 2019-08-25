@@ -1,4 +1,4 @@
-var db = require("../../models");
+var db = require("../../../models");
 
 var users = [
     {
@@ -177,8 +177,8 @@ async function makeData(Model, data) {
     var items = await Promise.all(promises);
     return items;
 }
-db.sequelize.sync({ force: true }).then(async function () {
-    await makeData(db.Items, products);
+db.sequelize.sync().then(async function () {
+    await makeData(db.Item, products);
     await makeData(db.User, users);
     // await makeData(db.UserSignup, userSignups);
     db.sequelize.close();
