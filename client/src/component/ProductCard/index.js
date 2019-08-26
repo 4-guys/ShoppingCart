@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
         flexDirection: 'column',
         background: 'linear-gradient(30deg, #4c345e 20%, #ec2156 90%)',
         color:'white',
-        boxShadow:'100px'
+        boxShadow:'100px',
     },
     cardMedia: {
         paddingTop: '56.25%', // 16:9
