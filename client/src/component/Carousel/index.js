@@ -13,28 +13,28 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const tutorialSteps = [
   {
-    label: 'Razer Blade Stealth',
-    imgPath: 'https://assets.pcmag.com/media/images/478709-razer-blade-stealth-8th-gen-cpu.jpg?width=810&height=456',
+    label: 'Back To School Sale',
+    imgPath: 'https://i.imgur.com/J1HW161.png',
   },
   {
-    label: 'Alienware Laptop',
+    label: 'Acer Predator 17 Gaming Laptop',
     imgPath:
-      'http://i.dell.com/sites/csimages/Video_Imagery/all/roll-up-aw-m15.png',
+      'https://i.imgur.com/FhdXrre.png',
   },
   {
-    label: 'Naga Mouse',
+    label: 'Logitech G-502 Mouse',
     imgPath:
-      'https://d4kkpd69xt9l7.cloudfront.net/sys-master/root/he1/h79/8909576994846/Razer_Naga_Trinity_09.jpg',
+      'https://i.imgur.com/55EklXg.png',
   },
   {
-    label: 'Logitech Headphones',
+    label: 'Logitech Keyboard',
     imgPath:
-      'https://assets.pcmag.com/media/images/552608-logitech-g935.jpg?width=810&height=456',
+      'https://i.imgur.com/hnmPPio.png',
   },
   {
-    label: 'Netgear Router',
+    label: 'Razer Stealth Blade Laptop',
     imgPath:
-      'https://images-na.ssl-images-amazon.com/images/I/81K4IHoxEHL._SL1500_.jpg',
+      'https://i.imgur.com/Xh8Ky43.png',
   },
 ];
 
@@ -48,7 +48,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     height: 50,
     paddingLeft: theme.spacing(4),
-    backgroundColor: theme.palette.background.default,
+    background: 'linear-gradient(30deg, #f0e8ea 20%, #fafafa 90%)'
   },
   img: {
     display: 'block',
@@ -81,7 +81,6 @@ function SwipeableTextMobileStepper() {
   return (
     <div className={classes.root}>
       <Paper square elevation={0} className={classes.header}>
-        <Typography>{tutorialSteps[activeStep].label}</Typography>
       </Paper>
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
@@ -101,6 +100,7 @@ function SwipeableTextMobileStepper() {
         steps={maxSteps}
         position="static"
         variant="dots"
+        classeName={classes.img}
         activeStep={activeStep}
         nextButton={
           <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>

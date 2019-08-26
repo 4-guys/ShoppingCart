@@ -10,6 +10,17 @@ export default {
         return axios.get("/api/items/" + itemName).then(results => results.data);
     },
 
+    getRandom: function() {
+        return axios.get("/api/items/").then(
+            function(results){
+                for (var i =0; i < results.length;i++){
+                   i = Math.floor(Math.random()* results.length + 1);
+                    console.log(results[i].data)
+                } return results[i].data
+            }
+        )
+    },
+
     loginUser: function (newUser) {
         sessionStorage.setItem("login", "true")
 

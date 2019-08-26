@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import SimpleMenu from '../Menu'
-import images from '../../assets/images/Logo.jpg';
+import images from '../../assets/images/Logo.png';
 import { Hidden } from '@material-ui/core';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import API from '../../utils/API';
@@ -38,6 +38,7 @@ const useStyles = makeStyles(theme => ({
   },
   logo: {
     height: '65px',
+    paddingTop: '10px'
   },
   link: {
     margin: theme.spacing(1, 1.5),
