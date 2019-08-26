@@ -46,7 +46,6 @@ export default function StickyFooter() {
     <div className={classes.root}>
       <CssBaseline />
       <Container component="main" className={classes.main} maxWidth="sm">
-        <Typography variant="body1">Chris chugs Soju...SOGU.</Typography>
         <Copyright />
       </Container>
 
