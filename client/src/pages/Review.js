@@ -77,21 +77,41 @@ export default function Review() {
     
 async function cart(){
     await API.getItems().then(items=> itemsAll=items)
+    if(!localStorage.getItem('cart')){
+        let cart = localStorage.getItem('cart') 
+                  ? JSON.parse(localStorage.getItem('cart')) : {};
+    let id = "0"
+    cart[id] = (cart[id] ? cart[id]: 0);
+    let qty = cart[id] + parseInt(1);
+    // if (this.props.product.available_quantity < qty) {
+    //   cart[id] = this.props.product.available_quantity; 
+    // } else {
+      cart[id] = qty
+    // }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    }
         let cart = localStorage.getItem('cart');
+        console.log(cart)
       var arr= cart.split(",")
       var purchasedProdId=[]
-      for(var i=1;i<arr.length-1;i++){
+      var quantity=[]
+      for(var i=0;i<arr.length;i++){
             var keyVal=arr[i].split(':')
-            var str2 = keyVal[0].replace (/"/g, "")
+            var str1 = keyVal[0].replace (/"/g, "")
+            var str2 = str1.replace (/{/g, "")
+            var qty = keyVal[1].replace (/}/g, "")
+
+            quantity.push(qty)
           purchasedProdId.push(str2)
       }
+      console.log(quantity)
       for(var j=0;j<itemsAll.length;j++){
           for(var k=0;k<purchasedProdId.length;k++){
-          if(j==purchasedProdId[k])  
+          if(itemsAll[j].id==purchasedProdId[k])  
           {
-              var newProduct= { name: itemsAll[j].brandName, desc: itemsAll[j].itemDescription, price: itemsAll[j].ourPrice }
+              var newProduct= { name: itemsAll[j].brandName +itemsAll[j].itemName, desc: itemsAll[j].itemDescription, price:  +quantity[k]+" x $"+itemsAll[j].ourPrice, quantity:quantity[k]}
               products.push(newProduct)
-              total= total + itemsAll[j].ourPrice
+              total= total + itemsAll[j].ourPrice*quantity[k]
           }
         }
       }

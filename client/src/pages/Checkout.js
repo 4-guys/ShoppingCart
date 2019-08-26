@@ -55,7 +55,9 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const steps = ['Review your order','Shipping address', 'Payment details', 'Place Order' ];
-
+function emptyCart(){
+    localStorage.clear()
+}
 function getStepContent(step) {
     switch (step) {
         case 0:
@@ -111,7 +113,7 @@ export default function Checkout() {
                 </Typography>
                                 <Typography variant="subtitle1">
                                     Your order number is #2001539. We have emailed your order confirmation, and will
-                                    send you an update when your order has shipped.
+                                    send you an update when your order has shipped.{emptyCart()}
                 </Typography>
                             </React.Fragment>
                         ) : (
