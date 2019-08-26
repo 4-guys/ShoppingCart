@@ -23,7 +23,8 @@ const useStyles = makeStyles(theme => ({
         boxShadow:'100px'
     },
     cardMedia: {
-        paddingTop: '56.25%', // 16:9
+        paddingTop: '56.25%',
+        width: '90%' // 16:9
     },
     cardContent: {
         flexGrow: 1,
