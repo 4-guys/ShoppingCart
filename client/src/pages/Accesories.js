@@ -19,7 +19,7 @@ class Products extends Component {
         this.getItems();
     };
     getItems = () => {
-        API.getItem("Accesories").then(items => this.setState({ items }))
+        API.getItem("Accessories").then(items => this.setState({ items }))
     }
 
        handleClick = (id) => () => {
@@ -44,9 +44,7 @@ class Products extends Component {
                                 Accesories
                                 </Typography>
                             <Typography variant="h5" align="center" color="textSecondary" paragraph>
-                                Something short and leading about the collection below—its contents, the creator, etc.
-                                Make it short and sweet, but not too short so folks don&apos;t simply skip over it
-                                entirely.
+                            SOGU
                             </Typography>
 
                         </Container>
@@ -62,6 +60,7 @@ class Products extends Component {
                                     image={card.itemImg}
                                     title={card.brandName + " " + card.itemName}
                                     itemDescription={card.itemDescription}
+                                    ourPrice={card.ourPrice}
                                     handleToggle={this.handleClick(card.id)}
 
                                 />

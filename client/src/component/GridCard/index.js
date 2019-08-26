@@ -24,6 +24,8 @@ const useStyles = makeStyles(theme => ({
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
+        background: 'linear-gradient(30deg, #4c345e 20%, #ec2156 90%)',
+        color:'white'
     },
     cardMedia: {
         paddingTop: '56.25%', // 16:9
@@ -57,7 +59,7 @@ export function GridCard(props) {
                 />
                 <CardContent className={classes.cardContent}>
                     <Button href="/productDetails">
-                        <Typography gutterBottom variant="h5" component="h2">
+                        <Typography gutterBottom variant="h5" component="h2" style={{color:'#fde7fa'}}>
                             {props.title}
                         </Typography>
                     </Button>        <Typography>
@@ -67,10 +69,10 @@ export function GridCard(props) {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button onClick={props.handleToggle} size="small" color="primary">
+                    <Button onClick={props.handleToggle} size="small" style={{color:'#ec2156'}}>
                         Add to Cart
 </Button>
-                    <Button href="/checkout" size="small" color="primary">
+                    <Button href="/checkout" size="small" style={{color:'#ec2156'}}>
                         Checkout
 </Button>
                 </CardActions>
