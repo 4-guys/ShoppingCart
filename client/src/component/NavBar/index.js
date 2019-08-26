@@ -113,7 +113,7 @@ export default function Pricing() {
           {!loginState ? 
           <Button href="/login" color="#727070" variant="outlined" className={classes.link}>
             Login
-    </Button> :           <Button onClick={logout} color="#727070" variant="outlined" className={classes.link}>
+    </Button> :           <Button onClick={logout} href="/" color="#727070" variant="outlined" className={classes.link}>
             Logout
           </Button> }
         </Toolbar>
