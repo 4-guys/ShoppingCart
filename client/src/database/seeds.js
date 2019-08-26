@@ -40,11 +40,7 @@ var products = [
         brandName: "Alienware",
         itemName: "Laptop",
         itemDescription: "Revolutionary 17-inch gaming laptop with upgradeable, overclockable desktop 9th Gen Intel® Core™ processors and NVIDIA Geforce RTX graphics , plus a magnesium alloy chassis.",
-<<<<<<< HEAD
-        itemImg: "https://cdn11.bigcommerce.com/s-r4tr0/images/stencil/1280x1280/products/256144/412223/1466184019000_1258957__30024.1561576917.jpg?c=2",
-=======
         itemImg:"https://i.imgur.com/rocB2Yu.png",
->>>>>>> origin/calvin
         itemCategory: "Laptop",
         quantity: 100,
         MSRP: 2000,
@@ -55,11 +51,7 @@ var products = [
         brandName: "Predator",
         itemName: "Laptop",
         itemDescription: "Designed for those with a need to speed, the Predator 17 gaming notebook combines powerful 6th Gen Intel Core processor with high-performance NVIDIA GeForce graphics.",
-<<<<<<< HEAD
-        itemImg: "https://thegadgetflow.com/wp-content/uploads/2017/01/Acer-Predator-21X-Gaming-Laptop-04.jpg",
-=======
         itemImg: "https://i.imgur.com/H8Je9Rv.png",
->>>>>>> origin/calvin
         itemCategory: "Laptop",
         quantity: 100,
         MSRP: 2000,
@@ -91,13 +83,8 @@ var products = [
     {
         brandName: "Demon Hunter",
         itemName: "Gaming Mouse",
-<<<<<<< HEAD
-        itemDescription: "The mouse comes with a driver which allows you to set its DPI from 250 to 4000 so that you can find the perfect sensitivity for your style of gameplay.",
-        itemImg: "https://cdn.shopify.com/s/files/1/1693/6515/products/fanduco-mice-demon-hunter-gaming-mouse-with-9-programmable-buttons-27424611219_2000x.jpg?v=1509179865",
-=======
         itemDescription: "The mouse comes with a driver which allows you to set its DPI from 250 to 4000 so that you can find the perfect sensitivity for your style of gameplay. ",
         itemImg: "https://i.imgur.com/e4clqys.png",
->>>>>>> origin/calvin
         itemCategory: "Gaming Mouse",
         quantity: 500,
         MSRP: 100,
@@ -108,11 +95,7 @@ var products = [
         brandName: "Logitech",
         itemName: "Gaming Mouse",
         itemDescription: "Logitech G develops award-winning wireless and wired gaming mice. Constantly innovating from sensors to shape, find the right one for you.",
-<<<<<<< HEAD
-        itemImg: "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1537996771-logitech-g502-gaming-mouse-1537996751.jpg",
-=======
         itemImg: "https://i.imgur.com/Xw5QYwF.png",
->>>>>>> origin/calvin
         itemCategory: "Gaming Mouse",
         quantity: 500,
         MSRP: 150,
@@ -123,11 +106,7 @@ var products = [
         brandName: "Logitech",
         itemName: "Headphones",
         itemDescription: "Pro-G™ Audio Drivers and DTS Headphone:X 7.1 Surround Sound Audio",
-<<<<<<< HEAD
-        itemImg: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6320/6320789_rd.jpg",
-=======
         itemImg: "https://i.imgur.com/lt5eXi7.png",
->>>>>>> origin/calvin
         itemCategory: "Audio",
         quantity: 500,
         MSRP: 70,
@@ -138,11 +117,7 @@ var products = [
         brandName: "Redragon",
         itemName: "Headphones",
         itemDescription: "Enjoy superb, balanced sound and supreme comfort with the OneOdio Studio monitor headphones.",
-<<<<<<< HEAD
-        itemImg: "http://redragonusa.com/storage/AORQZnOO5AFtvL6uRqlWvDOPg00HYaK9UW2yp2kH.png",
-=======
         itemImg: "https://i.imgur.com/ZxAL4kG.png",
->>>>>>> origin/calvin
         itemCategory: "Audio",
         quantity: 500,
         MSRP: 100,
@@ -164,11 +139,7 @@ var products = [
         brandName: "NETGEAR",
         itemName: "Gaming Router",
         itemDescription: "The XR500 Nighthawk Pro Gaming WiFi Router uses state-of-the-art software to optimize your internet connection by stabilizing ping.",
-<<<<<<< HEAD
-        itemImg: "https://images-na.ssl-images-amazon.com/images/I/81K4IHoxEHL._SL1500_.jpg",
-=======
         itemImg: "https://i.imgur.com/R4x9rPZ.png",
->>>>>>> origin/calvin
         itemCategory: "Accessories",
         quantity: 500,
         MSRP: 100,
@@ -190,11 +161,7 @@ var products = [
         brandName: "Logitech",
         itemName: "Gaming Keyboard",
         itemDescription: "With the K800, low lighting conditions won’t keep you from catching up on emails or Facebook feeds.",
-<<<<<<< HEAD
-        itemImg: "https://images-na.ssl-images-amazon.com/images/I/81X2lcJiwqL._SL1500_.jpg",
-=======
         itemImg: "https://i.imgur.com/hnmPPio.png",
->>>>>>> origin/calvin
         itemCategory: "Keyboards",
         quantity: 500,
         MSRP: 175,
@@ -205,11 +172,7 @@ var products = [
         brandName: "Blazer",
         itemName: "Gaming Mouse",
         itemDescription: "Experience total control in your hand, no matter what game you play. Designed to provide the edge you need in MOBA/MMO gameplay.",
-<<<<<<< HEAD
-        itemImg: "https://d4kkpd69xt9l7.cloudfront.net/sys-master/root/he1/h79/8909576994846/Razer_Naga_Trinity_09.jpg",
-=======
         itemImg: "https://i.imgur.com/xiWUAyS.png",
->>>>>>> origin/calvin
         itemCategory: "Gaming Mouse",
         quantity: 500,
         MSRP: 100,
@@ -220,11 +183,7 @@ var products = [
         brandName: "Blazer",
         itemName: "Laptop",
         itemDescription: "The Razer Blade Stealth 13” laptop is equipped with a more powerful 25W NVIDIA GeForce MX150 4GB graphics for gaming and content creation.",
-<<<<<<< HEAD
-        itemImg: "https://assets.pcmag.com/media/images/478709-razer-blade-stealth-8th-gen-cpu.jpg?width=810&height=456",
-=======
         itemImg: "https://i.imgur.com/Xh8Ky43.png",
->>>>>>> origin/calvin
         itemCategory: "Laptop",
         quantity: 500,
         MSRP: 1600,
