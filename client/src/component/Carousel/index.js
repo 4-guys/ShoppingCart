@@ -30,12 +30,12 @@ const tutorialSteps = [
   {
     label: 'Logitech Keyboard',
     imgPath:
-      'https://i.imgur.com/hnmPPio.png',
+      'https://i.imgur.com/31RN2lx.png',
   },
   {
-    label: 'Razer Stealth Blade Laptop',
+    label: 'Nighthawk',
     imgPath:
-      'https://i.imgur.com/Xh8Ky43.png',
+      'https://i.imgur.com/03bcXft.png',
   },
 ];
 
