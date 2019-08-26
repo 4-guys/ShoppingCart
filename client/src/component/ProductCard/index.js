@@ -23,8 +23,8 @@ const useStyles = makeStyles(theme => ({
         boxShadow:'100px'
     },
     cardMedia: {
-        paddingTop: '56.25%',
-        width: '90%' // 16:9
+        backgroundSize: 'contain',
+        paddingTop: '56.25%'
     },
     cardContent: {
         flexGrow: 1,
@@ -62,9 +62,6 @@ export function ProductCard(props) {
                     <CardActions>
                         <Button onClick={props.handleToggle} size="small" style={{color:'#ec2156'}} >
                             Add to Cart
-</Button>
-                        <Button href="/checkout" size="small" style={{color:'#ec2156'}}>
-                            Checkout
 </Button>
                     </CardActions>
                 </Card>
