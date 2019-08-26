@@ -15,6 +15,7 @@ const tutorialSteps = [
   {
     label: 'Back To School Sale',
     imgPath: 'https://i.imgur.com/J1HW161.png',
+    linkPath: '../Products',
   },
   {
     label: 'Acer Predator 17 Gaming Laptop',
