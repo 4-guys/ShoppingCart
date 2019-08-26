@@ -19,12 +19,12 @@ const tutorialSteps = [
   {
     label: 'Acer Predator 17 Gaming Laptop',
     imgPath:
-      'https://i.imgur.com/ApOkO2G.png',
+      'https://i.imgur.com/FhdXrre.png',
   },
   {
     label: 'Logitech G-502 Mouse',
     imgPath:
-      'https://i.imgur.com/bKaxAn3.png',
+      'https://i.imgur.com/55EklXg.png',
   },
   {
     label: 'Logitech Keyboard',
@@ -81,7 +81,6 @@ function SwipeableTextMobileStepper() {
   return (
     <div className={classes.root}>
       <Paper square elevation={0} className={classes.header}>
-        <Typography>{tutorialSteps[activeStep].label}</Typography>
       </Paper>
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
@@ -101,6 +100,7 @@ function SwipeableTextMobileStepper() {
         steps={maxSteps}
         position="static"
         variant="dots"
+        classeName={classes.img}
         activeStep={activeStep}
         nextButton={
           <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
