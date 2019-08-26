@@ -44,5 +44,5 @@ let products=[]
       cart[id] = qty
     // }
     localStorage.setItem('cart', JSON.stringify(cart));
-  console.log(localStorage.cart + price)
+  console.log(localStorage.cart)
   }
