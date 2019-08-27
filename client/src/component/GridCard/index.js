@@ -72,9 +72,6 @@ export function GridCard(props) {
                     <Button onClick={props.handleToggle} size="small" style={{color:'#ec2156'}}>
                         Add to Cart
 </Button>
-                    <Button href="/checkout" size="small" style={{color:'#ec2156'}}>
-                        Checkout
-</Button>
                 </CardActions>
             </Card>
         </Grid>

@@ -41,11 +41,8 @@ class Products extends Component {
                     >
                         <Container style={divStyle} maxWidth="sm">
                             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-                                Accesories
+                                Accessories
                                 </Typography>
-                            <Typography variant="h5" align="center" color="textSecondary" paragraph>
-                            SOGU
-                            </Typography>
 
                         </Container>
                     </div>

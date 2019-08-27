@@ -95,7 +95,7 @@ export default function Pricing() {
       <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
           <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-            <Link variant="h6" color="textPrimary" href="/home" underline='none' className={classes.link}>
+            <Link variant="h6" color="textPrimary" href="/" underline='none' className={classes.link}>
               <img src={images} className={classes.logo}></img>
             </Link>
           </Typography>
@@ -113,7 +113,7 @@ export default function Pricing() {
           {!loginState ? 
           <Button href="/login" color="#727070" variant="outlined" className={classes.link}>
             Login
-    </Button> :           <Button onClick={logout} href="/home" color="#727070" variant="outlined" className={classes.link}>
+    </Button> :           <Button onClick={logout} href="/" color="#727070" variant="outlined" className={classes.link}>
             Logout
           </Button> }
         </Toolbar>

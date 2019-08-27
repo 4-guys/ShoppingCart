@@ -50,7 +50,7 @@ export default function Login() {
             email,
             password
           })
-            .then(res => window.location.replace("/home"))
+            .then(res => window.location.replace("/"))
             .catch(err => console.log(err));
         }
       };
