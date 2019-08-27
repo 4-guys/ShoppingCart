@@ -57,7 +57,8 @@ const useStyles = makeStyles(theme => ({
     height: '350px',
     marginLeft: "auto",
     marginRight: "auto",
-    backgroundColor: "#ece0e3"
+    width: '100%',
+    height: '100%'
   },
 }));
 

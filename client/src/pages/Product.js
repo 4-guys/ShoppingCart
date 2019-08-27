@@ -43,9 +43,7 @@ class Products extends Component {
                             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
                                 Laptops
                                 </Typography>
-                            <Typography variant="h5" align="center" color="textSecondary" paragraph>
-                            SOGU
-                            </Typography>
+
 
                         </Container>
                     </div>
