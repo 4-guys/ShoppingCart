@@ -56,7 +56,7 @@ app.get("*", function(req, res) {
 //   console.log(`🌎 ==> API server now on port ${PORT}!`);
 // });
 
-db.sequelize.sync().then(function() {
+db.sequelize.sync({force:true}).then(function() {
   app.listen(PORT, function() {
     console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
   });
